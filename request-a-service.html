@@ -226,7 +226,25 @@
           </div>
 
           <div class="service-request-form-container">
-            <form id="serviceRequestForm" class="service-request-form">
+            <form
+              id="serviceRequestForm"
+              class="service-request-form"
+              name="waldman-service-request"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              action="/thank-you.html">
+              <!-- Hidden fields for Netlify -->
+              <input
+                type="hidden"
+                name="form-name"
+                value="waldman-service-request" />
+              <p class="hidden" style="display: none">
+                <label
+                  >Don't fill this out if you're human: <input name="bot-field"
+                /></label>
+              </p>
+
               <!-- Name Field -->
               <div class="service-request-field">
                 <label for="name" class="service-request-label"

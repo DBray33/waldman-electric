@@ -332,7 +332,22 @@
               Please fill out this short form and we'll contact you shortly.
             </p>
 
-            <form class="contact-form" id="contactForm">
+            <form
+              class="contact-form"
+              id="contactForm"
+              name="waldman-contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              action="/thank-you.html">
+              <!-- Add these hidden fields for Netlify -->
+              <input type="hidden" name="form-name" value="waldman-contact" />
+              <p class="hidden" style="display: none">
+                <label
+                  >Don't fill this out if you're human: <input name="bot-field"
+                /></label>
+              </p>
+
               <div class="form-group">
                 <label for="name">Full Name*</label>
                 <input type="text" id="name" name="name" required />
@@ -373,9 +388,9 @@
               </div>
 
               <div class="form-group recaptcha-container">
-                <div class="recaptcha-placeholder">
-                  This site is protected by reCAPTCHA.
-                </div>
+                <div
+                  data-netlify-recaptcha="true"
+                  class="recaptcha-element"></div>
               </div>
 
               <div class="form-group submit-container">
