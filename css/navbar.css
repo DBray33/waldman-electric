@@ -1,0 +1,608 @@
+/* ============================================
+   ROOT VARIABLES
+   ============================================ */
+:root {
+  --primary-color: #8b0000;
+  --secondary-color: #333;
+  --accent-color: #f5a623;
+  --light-gray: #f5f5f5;
+  --dark-gray: #444;
+  --white: #fff;
+  --black: #222;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) skewX(-30deg);
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(200%) skewX(-30deg);
+  }
+}
+
+/* ============================================
+   HEADER ELEMENTS
+   ============================================ */
+header {
+  position: fixed; /* Always fixed */
+  width: 100%;
+  top: 0;
+  z-index: 100 !important;
+  background-color: rgba(0, 0, 0, 0.9); /* Darker by default */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+header.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000 !important;
+}
+
+/* ============================================
+   MAIN NAVIGATION
+   ============================================ */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 5%;
+  transition: var(--transition);
+  z-index: 900 !important;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    padding: 32px 5%;
+  }
+}
+
+/* ============================================
+   LOGO
+   ============================================ */
+.logo-container {
+  max-width: 180px;
+  position: relative;
+}
+
+.logo-container::after {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  bottom: -10px;
+  left: -10%;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   DESKTOP NAVIGATION STYLES
+   ============================================ */
+/* Hide the mobile nav by default */
+.mobile-nav {
+  display: none;
+}
+
+/* Desktop navigation */
+.desktop-links {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  z-index: 999;
+}
+
+.desktop-links li {
+  position: relative;
+  margin-left: 20px;
+  transition: transform 0.2s ease;
+}
+
+.desktop-links li:not(.dropdown):hover {
+  transform: translateY(-2px);
+}
+
+.desktop-links a {
+  color: var(--white);
+  font-weight: 600;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  position: relative;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  z-index: 95;
+}
+
+.desktop-links a i {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.desktop-links a:hover i {
+  transform: rotate(180deg);
+}
+
+.desktop-links a:hover,
+.desktop-links .active {
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.desktop-links .active {
+  position: relative;
+  overflow: hidden;
+}
+
+.desktop-links .active::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--accent-color)
+  );
+}
+
+/* ============================================
+   DESKTOP DROPDOWN STYLES
+   ============================================ */
+.desktop-links .dropdown {
+  position: relative;
+  z-index: 9999 !important;
+}
+
+.desktop-links .dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(15px);
+  background-color: rgba(0, 0, 0, 0.85);
+  min-width: 220px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10000 !important;
+  border-radius: 8px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Desktop dropdown using hover */
+.desktop-links .dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(5px);
+}
+
+.desktop-links .dropdown-content a {
+  color: var(--white) !important;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.desktop-links .dropdown-content a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--primary-color);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.desktop-links .dropdown-content a:hover::before {
+  transform: scaleY(1);
+}
+
+.desktop-links .dropdown-content a i {
+  font-size: 1rem;
+  color: var(--accent-color);
+  width: 20px;
+  text-align: center;
+}
+
+.desktop-links .dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--white) !important;
+  padding-left: 24px;
+}
+
+/* Nav indicator for all desktop links */
+.nav-indicator {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  transition: width 0.3s ease;
+}
+
+/* Show indicator on hover for all desktop links including dropdowns */
+.desktop-links a:hover .nav-indicator,
+.desktop-links .dropdown > a:hover .nav-indicator {
+  width: 100%;
+}
+
+/* Make sure all desktop links have the indicator effect even without span */
+.desktop-links a:not(:has(.nav-indicator))::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  transition: width 0.3s ease;
+}
+
+.desktop-links a:not(:has(.nav-indicator)):hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   CONTACT LINK
+   ============================================ */
+.desktop-links .contact-link {
+  background-color: rgba(139, 0, 0, 0.2);
+  border-radius: 50px !important;
+  padding: 10px 20px !important;
+  border: 1px solid rgba(139, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.desktop-links .contact-link:hover {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+}
+
+/* ============================================
+   MOBILE NAVIGATION STYLES
+   ============================================ */
+.mobile-nav {
+  display: none;
+}
+
+.mobile-links {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: var(--black);
+  z-index: 9998;
+  flex-direction: column;
+  padding: 80px 0 30px;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+}
+
+.mobile-links.active {
+  right: 0;
+}
+
+.mobile-links li {
+  width: 100%;
+  margin: 0;
+}
+
+.mobile-links a {
+  color: var(--white);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  width: 100%;
+  font-size: 0.95rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  position: relative; /* Added for underline positioning */
+}
+
+/* Add underline hover effect for mobile links */
+.mobile-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  transition: width 0.3s ease;
+}
+
+.mobile-links a:hover::after,
+.mobile-links a:active::after {
+  width: 100%;
+}
+
+/* ============================================
+   MOBILE DROPDOWN STYLES
+   ============================================ */
+.mobile-links .dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: max-height 0.3s ease;
+}
+
+.mobile-links .dropdown.active .dropdown-content {
+  max-height: 1000px;
+}
+
+.mobile-links .dropdown-content a {
+  padding: 15px 40px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: flex-start; /* Change from space-between to flex-start */
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Add gap between icon and text */
+}
+
+/* Style mobile dropdown icons to match desktop */
+.mobile-links .dropdown-content a i {
+  font-size: 1rem;
+  color: var(--accent-color);
+  width: 20px;
+  text-align: center;
+  transition: transform 0.3s ease; /* Added transition for smooth rotation */
+}
+
+/* Add hover rotation effect to match desktop */
+.mobile-links .dropdown-content a:hover i {
+  transform: rotate(180deg);
+}
+
+/* Make sure dropdown links also have the hover effect */
+.mobile-links .dropdown-content a::after {
+  bottom: 0;
+  left: 0;
+}
+
+.mobile-links .dropdown > a i {
+  transition: transform 0.3s ease;
+}
+
+.mobile-links .dropdown.active > a i {
+  transform: rotate(180deg);
+}
+
+/* ============================================
+   MOBILE MENU TOGGLE BUTTON
+   ============================================ */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 9999;
+  position: fixed; /* Changed from relative to fixed */
+  top: 20px; /* Fixed position at top */
+  right: 20px; /* Fixed position at right */
+  transition: all 0.3s ease;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 30px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+/* Large Desktop Breakpoint - Initial Font Size Reduction */
+@media (max-width: 1240px) {
+  .desktop-links a {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+
+  .desktop-links li {
+    margin-left: 10px;
+  }
+
+  .desktop-links .contact-link {
+    padding: 8px 15px !important;
+  }
+
+  .logo-container {
+    display: none !important;
+  }
+}
+
+/* Medium Desktop Breakpoint */
+@media (max-width: 1041px) {
+  header {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .hero {
+    margin-top: 0;
+  }
+
+  .logo-container {
+    display: none;
+  }
+}
+
+/* Small Desktop Breakpoint - Further Font Size Reduction */
+@media (max-width: 1010px) {
+  .desktop-links a {
+    font-size: 0.7rem;
+    padding: 6px 8px;
+  }
+
+  .desktop-links li {
+    margin-left: 5px;
+  }
+
+  .desktop-links .contact-link {
+    padding: 6px 12px !important;
+  }
+}
+
+/* Tablet Breakpoint - Minimum Font Size Before Mobile View */
+@media (max-width: 835px) {
+  .desktop-links a {
+    font-size: 0.65rem;
+    padding: 5px 6px;
+  }
+
+  .desktop-links li {
+    margin-left: 3px;
+  }
+
+  .desktop-links .contact-link {
+    padding: 5px 10px !important;
+  }
+}
+
+/* ============================================
+   MOBILE BREAKPOINT - SWITCH NAVIGATION SYSTEMS
+   ============================================ */
+@media (max-width: 768px) {
+  /* Switch from desktop to mobile navigation */
+  .desktop-links {
+    display: none; /* Hide desktop navigation */
+  }
+
+  .mobile-nav {
+    display: block; /* Show mobile navigation container */
+  }
+
+  .menu-toggle {
+    display: flex; /* Show hamburger menu */
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  /* Logo container remains hidden at mobile size */
+  .logo-container {
+    display: none !important;
+  }
+
+  /* Hero spacing */
+  .hero {
+    margin-top: 0 !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
+
+  /* Contact link styling for mobile */
+  .mobile-links .contact-link {
+    display: flex;
+    justify-content: space-between;
+    background-color: inherit !important;
+    border-radius: 0 !important;
+    padding: 15px 20px !important;
+    border: none !important;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* ============================================
+   CONTENT OFFSET FOR FIXED HEADER
+   ============================================ */
+main {
+  padding-top: 80px; /* Adjust based on your header height */
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 60px; /* Smaller offset on mobile */
+  }
+}

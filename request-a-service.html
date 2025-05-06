@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request a Service - Waldman Electrical Contractors</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav class="main-nav">
+        <div class="logo-container">
+          <a href="/">
+            <img
+              src="https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Contact/waldman-logo.webp"
+              alt="Waldman Electrical Contractors Logo"
+              class="logo" />
+          </a>
+        </div>
+
+        <!-- DESKTOP NAVIGATION -->
+        <ul class="nav-links desktop-links">
+          <li>
+            <a href="/">Home <span class="nav-indicator"></span></a>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">Electric Services</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/residential-electric.html"
+                ><i class="fas fa-home"></i> Residential Electric</a
+              >
+              <a href="/commercial-electric.html"
+                ><i class="fas fa-building"></i> Commercial Electric</a
+              >
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">Generators</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/automatic.html"
+                ><i class="fas fa-power-off"></i> Automatic Generators</a
+              >
+              <a href="/manual.html"
+                ><i class="fas fa-cog"></i> Manual Generators</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="/lightning-protection.html"
+              >Lightning Protection <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li>
+            <a href="/reviews.html"
+              >Reviews <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">About</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/about.html"><i class="fas fa-info-circle"></i> About</a>
+              <a href="/waldman-history.html"
+                ><i class="fas fa-history"></i> Waldman History</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="/gallery.html"
+              >Gallery <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="contact-link active">
+              <span class="nav-text">Contact</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/contact.html"
+                ><i class="fas fa-envelope"></i> Contact</a
+              >
+              <a href="/request-a-service.html" class="active"
+                ><i class="fas fa-wrench"></i> Request a Service</a
+              >
+            </div>
+          </li>
+        </ul>
+
+        <!-- MOBILE NAVIGATION -->
+        <div class="mobile-nav">
+          <!-- Open Status for Mobile -->
+          <div class="mobile-status">
+            <span class="open-status">
+              <!-- This will be populated by JavaScript -->
+            </span>
+            <a href="/" class="mobile-home-button" aria-label="Go to homepage">
+              <i class="fas fa-home"></i>
+            </a>
+          </div>
+
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-links mobile-links">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li class="dropdown">
+              <a href="#">
+                Electric Services <i class="fas fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-content">
+                <a href="/residential-electric.html"
+                  ><i class="fas fa-home"></i> Residential Electric</a
+                >
+                <a href="/commercial-electric.html"
+                  ><i class="fas fa-building"></i> Commercial Electric</a
+                >
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#">Generators <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-content">
+                <a href="/automatic.html"
+                  ><i class="fas fa-power-off"></i> Automatic Generators</a
+                >
+                <a href="/manual.html"
+                  ><i class="fas fa-cog"></i> Manual Generators</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="/lightning-protection.html">Lightning Protection</a>
+            </li>
+            <li>
+              <a href="/reviews.html">Reviews</a>
+            </li>
+            <li class="dropdown">
+              <a href="#">About <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-content">
+                <a href="/about.html"
+                  ><i class="fas fa-info-circle"></i> About</a
+                >
+                <a href="/waldman-history.html"
+                  ><i class="fas fa-history"></i> Waldman History</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="/gallery.html">Gallery</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="contact-link active"
+                >Contact <i class="fas fa-chevron-down"></i
+              ></a>
+              <div class="dropdown-content">
+                <a href="/contact.html"
+                  ><i class="fas fa-envelope"></i> Contact</a
+                >
+                <a href="/request-a-service.html" class="active"
+                  ><i class="fas fa-wrench"></i> Request a Service</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Floating phone for mobile -->
+    <div class="floating-phone">
+      <a href="tel:6103720151">
+        <i class="fas fa-phone-alt"></i> (610) 372-0151
+      </a>
+    </div>
+
+    <!-- Service Request Header -->
+    <div class="service-request-header">
+      <div class="service-request-overlay"></div>
+      <div class="container">
+        <div class="service-request-content">
+          <div class="service-request-badge">Free Estimates</div>
+          <h1 class="service-request-title">Request a Service</h1>
+          <div class="service-request-subtitle">
+            We'll respond by the next business day to handle all your electrical
+            needs
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Request Form Section -->
+    <section class="service-request-section">
+      <div class="container">
+        <div class="service-request-wrapper">
+          <div class="service-request-intro">
+            <div class="service-request-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h2 class="service-request-heading">Request a Service</h2>
+            <p class="service-request-description">
+              Fill out this short form and a Waldman Electrical Contractors
+              representative will contact you by the next business day to
+              provide you with services.
+            </p>
+          </div>
+
+          <div class="service-request-form-container">
+            <form id="serviceRequestForm" class="service-request-form">
+              <!-- Name Field -->
+              <div class="service-request-field">
+                <label for="name" class="service-request-label"
+                  >Name<span class="required-indicator">*</span></label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="service-request-input"
+                  required />
+              </div>
+
+              <!-- Phone Field -->
+              <div class="service-request-field">
+                <label for="phone" class="service-request-label">Phone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="service-request-input" />
+              </div>
+
+              <!-- Email Field -->
+              <div class="service-request-field">
+                <label for="email" class="service-request-label"
+                  >Email<span class="required-indicator">*</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="service-request-input"
+                  required />
+              </div>
+
+              <!-- Services Field -->
+              <div class="service-request-field service-request-checkbox-group">
+                <label class="service-request-label"
+                  >Services and Products<span class="required-indicator"
+                    >*</span
+                  ></label
+                >
+                <div class="service-request-options">
+                  <div class="service-request-option">
+                    <input
+                      type="checkbox"
+                      id="residential"
+                      name="services[]"
+                      value="Residential Electric"
+                      class="service-request-checkbox" />
+                    <label
+                      for="residential"
+                      class="service-request-checkbox-label"
+                      >Residential Electric</label
+                    >
+                  </div>
+                  <div class="service-request-option">
+                    <input
+                      type="checkbox"
+                      id="commercial"
+                      name="services[]"
+                      value="Commercial Electric"
+                      class="service-request-checkbox" />
+                    <label
+                      for="commercial"
+                      class="service-request-checkbox-label"
+                      >Commercial Electric</label
+                    >
+                  </div>
+                  <div class="service-request-option">
+                    <input
+                      type="checkbox"
+                      id="generators"
+                      name="services[]"
+                      value="Generators"
+                      class="service-request-checkbox" />
+                    <label
+                      for="generators"
+                      class="service-request-checkbox-label"
+                      >Generators</label
+                    >
+                  </div>
+                  <div class="service-request-option">
+                    <input
+                      type="checkbox"
+                      id="lightning"
+                      name="services[]"
+                      value="Lightning Protection"
+                      class="service-request-checkbox" />
+                    <label
+                      for="lightning"
+                      class="service-request-checkbox-label"
+                      >Lightning Protection</label
+                    >
+                  </div>
+                  <div class="service-request-option">
+                    <input
+                      type="checkbox"
+                      id="other"
+                      name="services[]"
+                      value="Other"
+                      class="service-request-checkbox" />
+                    <label for="other" class="service-request-checkbox-label"
+                      >Other</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Message Field -->
+              <div class="service-request-field">
+                <label for="message" class="service-request-label"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  class="service-request-textarea"
+                  rows="5"></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="service-request-submit">
+                <button type="submit" class="service-request-button">
+                  <i class="fas fa-paper-plane"></i> Submit Request
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Emergency Service Banner -->
+    <section class="emergency-banner">
+      <div class="container">
+        <div class="emergency-banner-content">
+          <div class="emergency-banner-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div class="emergency-banner-text">
+            <h3>Need Emergency Service?</h3>
+            <p>
+              We provide 24/7 emergency electrical services. Call us directly:
+            </p>
+          </div>
+          <a href="tel:6103720151" class="emergency-banner-phone">
+            <i class="fas fa-phone-alt"></i> (610) 372-0151
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="service-cta">
+      <div class="service-cta-overlay"></div>
+      <div class="container">
+        <div class="service-cta-content">
+          <h2 class="service-cta-title">
+            Experience Quality Electrical Service
+          </h2>
+          <p class="service-cta-text">
+            With over 100 years of experience, our factory-trained technicians
+            are ready to handle all your electrical needs.
+          </p>
+          <div class="service-cta-features">
+            <div class="service-cta-feature">
+              <i class="fas fa-certificate"></i>
+              <span>Free Estimates</span>
+            </div>
+            <div class="service-cta-feature">
+              <i class="fas fa-shield-alt"></i>
+              <span>Warranted Work</span>
+            </div>
+            <div class="service-cta-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Same-Day Service</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>SERVICING</h3>
+          </div>
+          <p>Berks County, PA<br />and Surrounding Areas</p>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-clock"></i>
+            <h3>HOURS</h3>
+          </div>
+          <div class="hours-grid">
+            <span>Mon - Fri</span>
+            <span>8:00 am - 4:00 pm</span>
+            <span>Sat</span>
+            <span>Closed</span>
+            <span>Sun</span>
+            <span>Closed</span>
+          </div>
+          <p>24/7 Emergency Service, Same-Day Service</p>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-phone-alt"></i>
+            <h3>CONTACT US</h3>
+          </div>
+          <p>
+            Main: (610) 372-0151<br />
+            Toll Free: (800) 672-0151<br />
+            <a href="mailto:service@waldmanelectric.com"
+              >service@waldmanelectric.com</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <div class="line"></div>
+        <a
+          href="https://www.facebook.com/WaldmanElectricCompany"
+          class="social-icon"
+          target="_blank"
+          rel="noopener">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <div class="line"></div>
+      </div>
+
+      <div class="footer-links">
+        <a href="privacy-policy.html" target="_blank" rel="noopener"
+          >Privacy Policy</a
+        >
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

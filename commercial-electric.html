@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commercial Electric Services - Waldman Electrical Contractors</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav class="main-nav">
+        <div class="logo-container">
+          <a href="/">
+            <img
+              src="https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Commercial/waldman-logo.webp"
+              alt="Waldman Electrical Contractors Logo"
+              class="logo" />
+          </a>
+        </div>
+
+        <!-- DESKTOP NAVIGATION -->
+        <ul class="nav-links desktop-links">
+          <li>
+            <a href="/">Home <span class="nav-indicator"></span></a>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">Electric Services</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/residential-electric.html"
+                ><i class="fas fa-home"></i> Residential Electric</a
+              >
+              <a href="/commercial-electric.html"
+                ><i class="fas fa-building"></i> Commercial Electric</a
+              >
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">Generators</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/automatic.html"
+                ><i class="fas fa-power-off"></i> Automatic Generators</a
+              >
+              <a href="/manual.html"
+                ><i class="fas fa-cog"></i> Manual Generators</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="/lightning-protection.html"
+              >Lightning Protection <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li>
+            <a href="/reviews.html"
+              >Reviews <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">About</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/about.html"><i class="fas fa-info-circle"></i> About</a>
+              <a href="/waldman-history.html"
+                ><i class="fas fa-history"></i> Waldman History</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="/gallery.html"
+              >Gallery <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="contact-link">
+              <span class="nav-text">Contact</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/contact.html"
+                ><i class="fas fa-envelope"></i> Contact</a
+              >
+              <a href="/request-a-service.html"
+                ><i class="fas fa-wrench"></i> Request a Service</a
+              >
+            </div>
+          </li>
+        </ul>
+
+        <!-- MOBILE NAVIGATION -->
+        <div class="mobile-nav">
+          <!-- Open Status for Mobile -->
+          <div class="mobile-status">
+            <span class="open-status">
+              <!-- This will be populated by JavaScript -->
+            </span>
+            <a href="/" class="mobile-home-button" aria-label="Go to homepage">
+              <i class="fas fa-home"></i>
+            </a>
+          </div>
+
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-links mobile-links">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li class="dropdown">
+              <a href="#">
+                Electric Services <i class="fas fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-content">
+                <a href="/residential-electric.html"
+                  ><i class="fas fa-home"></i> Residential Electric</a
+                >
+                <a href="/commercial-electric.html"
+                  ><i class="fas fa-building"></i> Commercial Electric</a
+                >
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#">Generators <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-content">
+                <a href="/automatic.html"
+                  ><i class="fas fa-power-off"></i> Automatic Generators</a
+                >
+                <a href="/manual.html"
+                  ><i class="fas fa-cog"></i> Manual Generators</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="/lightning-protection.html">Lightning Protection</a>
+            </li>
+            <li>
+              <a href="/reviews.html">Reviews</a>
+            </li>
+            <li class="dropdown">
+              <a href="#">About <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-content">
+                <a href="/about.html"
+                  ><i class="fas fa-info-circle"></i> About</a
+                >
+                <a href="/waldman-history.html"
+                  ><i class="fas fa-history"></i> Waldman History</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="/gallery.html">Gallery</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="contact-link"
+                >Contact <i class="fas fa-chevron-down"></i
+              ></a>
+              <div class="dropdown-content">
+                <a href="/contact.html"
+                  ><i class="fas fa-envelope"></i> Contact</a
+                >
+                <a href="/request-a-service.html"
+                  ><i class="fas fa-wrench"></i> Request a Service</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Floating phone for mobile -->
+    <div class="floating-phone">
+      <a href="tel:6103720151">
+        <i class="fas fa-phone-alt"></i> (610) 372-0151
+      </a>
+    </div>
+
+    <!-- New Commercial Electric Header Design -->
+    <div class="ce-commercial-hero">
+      <div class="ce-commercial-hero-overlay"></div>
+      <div class="container">
+        <div class="ce-commercial-hero-content">
+          <div class="ce-commercial-badge">Commercial Electric</div>
+          <h1 class="ce-commercial-hero-title">
+            Professional Business Solutions
+          </h1>
+          <div class="ce-commercial-hero-subtitle">
+            Reliable Electrical Services for Your Business
+          </div>
+
+          <!-- Stats Bar -->
+          <div class="ce-commercial-stats">
+            <div class="ce-commercial-stat-item">
+              <div class="ce-commercial-stat-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <div class="ce-commercial-stat-text">
+                <span class="ce-commercial-stat-value">Expert</span>
+                <span class="ce-commercial-stat-label">Business Service</span>
+              </div>
+            </div>
+
+            <div class="ce-commercial-stat-item">
+              <div class="ce-commercial-stat-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="ce-commercial-stat-text">
+                <span class="ce-commercial-stat-value">45+</span>
+                <span class="ce-commercial-stat-label"
+                  >Years of Experience</span
+                >
+              </div>
+            </div>
+
+            <div class="ce-commercial-stat-item">
+              <div class="ce-commercial-stat-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="ce-commercial-stat-text">
+                <div class="open-status"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Commercial Electric Intro Section -->
+    <section class="ce-commercial-intro-new">
+      <div class="container">
+        <div class="ce-commercial-intro-content">
+          <div class="ce-commercial-intro-left">
+            <h2 class="ce-commercial-intro-heading">
+              Keep Your Business Well Lit
+            </h2>
+            <div class="ce-commercial-intro-divider"></div>
+            <p class="ce-commercial-intro-text">
+              From design/build to repairs and improvements, Waldman Electrical
+              Contractors is the right choice for your commercial needs. With
+              over 45 years of experience, our technicians are experienced
+              problem solvers and have the expertise to deliver your project on
+              time and on budget.
+            </p>
+            <p class="ce-commercial-intro-text">
+              Family-owned and operated since 1918, choose our master and
+              journeyman electricians for all your commercial electric needs.
+              Call today to schedule an appointment.
+            </p>
+          </div>
+          <div class="ce-commercial-intro-right">
+            <div class="ce-commercial-intro-image">
+              <img
+                src="https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Commercial/commercial-electrical-services.webp"
+                alt="Commercial Electrical Services"
+                class="ce-commercial-service-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services List Section -->
+    <section class="residential-services">
+      <div class="container">
+        <h2>Complete Business Electrical Services & Installation:</h2>
+        <div class="services-list">
+          <div class="service-item card-left">
+            <div class="service-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Lighting design, installation, & maintenance</h3>
+            <p class="service-description">
+              Interior, exterior and parking lot lighting solutions
+            </p>
+          </div>
+          <div class="service-item card-right">
+            <div class="service-icon">
+              <i class="fas fa-plug"></i>
+            </div>
+            <h3>Office power, lighting, communication and data</h3>
+            <p class="service-description">
+              Single and 3 phase wiring and 10/100 ethernet CAT5 cabling
+            </p>
+          </div>
+          <div class="service-item card-left">
+            <div class="service-icon">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <h3>Safety and code compliance</h3>
+            <p class="service-description">
+              Ensuring all electrical work meets current regulations
+            </p>
+          </div>
+          <div class="service-item card-right">
+            <div class="service-icon">
+              <i class="fas fa-power-off"></i>
+            </div>
+            <h3>Stand by power systems and maintenance</h3>
+            <p class="service-description">
+              Reliable backup power solutions for business continuity
+            </p>
+          </div>
+          <div class="service-item card-left">
+            <div class="service-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3>Lightning protection systems</h3>
+            <p class="service-description">
+              Comprehensive protection from lightning strikes
+            </p>
+          </div>
+          <div class="service-item card-right">
+            <div class="service-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Surge protection</h3>
+            <p class="service-description">
+              Safeguard equipment from damaging power surges
+            </p>
+          </div>
+          <div class="service-item card-left">
+            <div class="service-icon">
+              <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <h3>24-hour emergency service</h3>
+            <p class="service-description">
+              Around-the-clock electrical help when you need it most
+            </p>
+          </div>
+          <div class="service-item card-right">
+            <div class="service-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3>Remodeling and renovation</h3>
+            <p class="service-description">
+              Expert electrical services for your business upgrades
+            </p>
+          </div>
+          <div class="service-item card-left">
+            <div class="service-icon">
+              <i class="fas fa-arrow-up"></i>
+            </div>
+            <h3>Upgrades</h3>
+            <p class="service-description">
+              Modernizing your electrical systems for efficiency
+            </p>
+          </div>
+          <div class="service-item card-right">
+            <div class="service-icon">
+              <i class="fas fa-wrench"></i>
+            </div>
+            <h3>Repairs and maintenance</h3>
+            <p class="service-description">
+              Keeping your electrical systems running smoothly
+            </p>
+          </div>
+          <div class="service-item card-left">
+            <div class="service-icon">
+              <i class="fas fa-helmet-safety"></i>
+            </div>
+            <h3>Trenching and underground electric</h3>
+            <p class="service-description">
+              Professional underground utility installation services
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="commercial-cta">
+      <div class="container">
+        <h2>Commercial Electrical Experts</h2>
+        <p>Call us today for a FREE estimate.</p>
+        <a href="tel:6103720151" class="hero-btn">
+          <i class="fas fa-phone-alt"></i> (610) 372-0151
+        </a>
+        <p class="store-note">
+          <strong>Visit our</strong>
+          <a href="https://www.ebay.com/str/waldmanelectric" class="store-link"
+            >Store</a
+          >
+          for hard-to-find or obsolete circuit breakers.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>SERVICING</h3>
+          </div>
+          <p>Berks County, PA<br />and Surrounding Areas</p>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-clock"></i>
+            <h3>HOURS</h3>
+          </div>
+          <div class="hours-grid">
+            <span>Mon - Fri</span>
+            <span>8:00 am - 4:00 pm</span>
+            <span>Sat</span>
+            <span>Closed</span>
+            <span>Sun</span>
+            <span>Closed</span>
+          </div>
+          <p>24/7 Emergency Service, Same-Day Service</p>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-phone-alt"></i>
+            <h3>CONTACT US</h3>
+          </div>
+          <p>
+            Main: (610) 372-0151<br />
+            Toll Free: (800) 672-0151<br />
+            <a href="mailto:service@waldmanelectric.com"
+              >service@waldmanelectric.com</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <div class="line"></div>
+        <a
+          href="https://www.facebook.com/WaldmanElectricCompany"
+          class="social-icon"
+          target="_blank"
+          rel="noopener"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <div class="line"></div>
+      </div>
+
+      <div class="footer-links">
+        <a href="privacy-policy.html" target="_blank" rel="noopener"
+          >Privacy Policy</a
+        >
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

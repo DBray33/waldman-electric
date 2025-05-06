@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Waldman Electrical Contractors - Berks County, PA</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/about-page-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav class="main-nav">
+        <div class="logo-container">
+          <a href="/">
+            <img
+              src="https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/About/waldman-logo.webp"
+              alt="Waldman Electrical Contractors Logo"
+              class="logo" />
+          </a>
+        </div>
+
+        <!-- DESKTOP NAVIGATION -->
+        <ul class="nav-links desktop-links">
+          <li>
+            <a href="/">Home <span class="nav-indicator"></span></a>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">Electric Services</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/residential-electric.html"
+                ><i class="fas fa-home"></i> Residential Electric</a
+              >
+              <a href="/commercial-electric.html"
+                ><i class="fas fa-building"></i> Commercial Electric</a
+              >
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">Generators</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/automatic.html"
+                ><i class="fas fa-power-off"></i> Automatic Generators</a
+              >
+              <a href="/manual.html"
+                ><i class="fas fa-cog"></i> Manual Generators</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="/lightning-protection.html"
+              >Lightning Protection <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li>
+            <a href="/reviews.html"
+              >Reviews <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="active">
+              <span class="nav-text">About</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/about.html"><i class="fas fa-info-circle"></i> About</a>
+              <a href="/waldman-history.html"
+                ><i class="fas fa-history"></i> Waldman History</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="/gallery.html"
+              >Gallery <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="contact-link">
+              <span class="nav-text">Contact</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/contact.html"
+                ><i class="fas fa-envelope"></i> Contact</a
+              >
+              <a href="/request-a-service.html"
+                ><i class="fas fa-wrench"></i> Request a Service</a
+              >
+            </div>
+          </li>
+        </ul>
+
+        <!-- MOBILE NAVIGATION -->
+        <div class="mobile-nav">
+          <!-- Open Status for Mobile -->
+          <div class="mobile-status">
+            <span class="open-status">
+              <!-- This will be populated by JavaScript -->
+            </span>
+            <a href="/" class="mobile-home-button" aria-label="Go to homepage">
+              <i class="fas fa-home"></i>
+            </a>
+          </div>
+
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-links mobile-links">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li class="dropdown">
+              <a href="#">
+                Electric Services <i class="fas fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-content">
+                <a href="/residential-electric.html"
+                  ><i class="fas fa-home"></i> Residential Electric</a
+                >
+                <a href="/commercial-electric.html"
+                  ><i class="fas fa-building"></i> Commercial Electric</a
+                >
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#">Generators <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-content">
+                <a href="/automatic.html"
+                  ><i class="fas fa-power-off"></i> Automatic Generators</a
+                >
+                <a href="/manual.html"
+                  ><i class="fas fa-cog"></i> Manual Generators</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="/lightning-protection.html">Lightning Protection</a>
+            </li>
+            <li>
+              <a href="/reviews.html">Reviews</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="active"
+                >About <i class="fas fa-chevron-down"></i
+              ></a>
+              <div class="dropdown-content">
+                <a href="/about.html"
+                  ><i class="fas fa-info-circle"></i> About</a
+                >
+                <a href="/waldman-history.html"
+                  ><i class="fas fa-history"></i> Waldman History</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="/gallery.html">Gallery</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="contact-link"
+                >Contact <i class="fas fa-chevron-down"></i
+              ></a>
+              <div class="dropdown-content">
+                <a href="/contact.html"
+                  ><i class="fas fa-envelope"></i> Contact</a
+                >
+                <a href="/request-a-service.html"
+                  ><i class="fas fa-wrench"></i> Request a Service</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Floating phone for mobile -->
+    <div class="floating-phone">
+      <a href="tel:6103720151">
+        <i class="fas fa-phone-alt"></i> (610) 372-0151
+      </a>
+    </div>
+
+    <!-- New About Page Hero Design -->
+    <div class="ab-about-hero">
+      <div class="ab-about-hero-overlay"></div>
+      <div class="container">
+        <div class="ab-about-hero-content">
+          <div class="ab-about-badge">Our Company</div>
+          <h1 class="ab-about-hero-title">About Waldman Electrical</h1>
+          <div class="ab-about-hero-subtitle">
+            A Century of Electrical Excellence in Berks County
+          </div>
+
+          <!-- Stats Bar -->
+          <div class="ab-about-stats">
+            <div class="ab-about-stat-item">
+              <div class="ab-about-stat-icon">
+                <i class="fas fa-history"></i>
+              </div>
+              <div class="ab-about-stat-text">
+                <span class="ab-about-stat-value">Since</span>
+                <span class="ab-about-stat-label">1918</span>
+              </div>
+            </div>
+
+            <div class="ab-about-stat-item">
+              <div class="ab-about-stat-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="ab-about-stat-text">
+                <span class="ab-about-stat-value">45+</span>
+                <span class="ab-about-stat-label">Years of Experience</span>
+              </div>
+            </div>
+
+            <div class="ab-about-stat-item">
+              <div class="ab-about-stat-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="ab-about-stat-text">
+                <div class="open-status"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New About Page Intro Section -->
+    <section class="ab-about-intro-new">
+      <div class="container">
+        <div class="ab-about-intro-content">
+          <div class="ab-about-intro-left">
+            <h2 class="ab-about-intro-heading">
+              A Century of Electrical Excellence
+            </h2>
+            <div class="ab-about-intro-divider"></div>
+            <p class="ab-about-intro-text">
+              Waldman Electrical Contractors has been proudly serving West
+              Reading and Berks County, Pennsylvania since 1918. For over a
+              century, our family-owned business has delivered reliable,
+              professional electrical services with a commitment to quality
+              craftsmanship and customer satisfaction.
+            </p>
+            <p class="ab-about-intro-text">
+              Our experienced team of electricians combines traditional values
+              with modern expertise to provide solutions for all your
+              residential and commercial electrical needs. From basic repairs to
+              complex installations, you can count on our dedication to
+              excellence and attention to detail.
+            </p>
+          </div>
+          <div class="ab-about-intro-right">
+            <div class="ab-about-intro-image">
+              <img
+                src="images/about/company-history.webp"
+                alt="Waldman Electrical Contractors Team"
+                class="ab-about-company-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Content Section -->
+    <section class="waldman-about-content">
+      <div class="container">
+        <div class="waldman-about-card-grid">
+          <div class="waldman-about-card-column">
+            <div class="waldman-about-card">
+              <div class="waldman-about-card-icon">
+                <i class="fas fa-history"></i>
+              </div>
+              <h3 class="waldman-about-card-title">Established 1918</h3>
+              <p class="waldman-about-card-text">
+                With over 100 years of service to our community, Waldman
+                Electrical has built a reputation for reliability, quality, and
+                excellence in the electrical industry.
+              </p>
+            </div>
+          </div>
+
+          <div class="waldman-about-card-column">
+            <div class="waldman-about-card">
+              <div class="waldman-about-card-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h3 class="waldman-about-card-title">Expert Technicians</h3>
+              <p class="waldman-about-card-text">
+                Our factory-trained technicians bring over 45 years of
+                experience to every project, ensuring your electrical systems
+                are installed and maintained to the highest standards.
+              </p>
+            </div>
+          </div>
+
+          <div class="waldman-about-card-column">
+            <div class="waldman-about-card">
+              <div class="waldman-about-card-icon">
+                <i class="fas fa-file-invoice-dollar"></i>
+              </div>
+              <h3 class="waldman-about-card-title">Free Estimates</h3>
+              <p class="waldman-about-card-text">
+                We believe in transparent pricing and exceptional value. Contact
+                us today for a free, no-obligation estimate on your residential
+                or commercial electrical project.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="waldman-about-services">
+      <div class="container">
+        <h2 class="waldman-about-services-title">Our Comprehensive Services</h2>
+        <div class="waldman-about-services-grid">
+          <div class="waldman-about-service-block">
+            <div class="waldman-about-service-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3 class="waldman-about-service-title">Residential Electrical</h3>
+            <p class="waldman-about-service-text">
+              Complete electrical solutions for your home, from rewiring to new
+              installations and upgrades.
+            </p>
+            <a
+              href="/residential-electric.html"
+              class="waldman-about-service-link"
+              >Learn More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="waldman-about-service-block">
+            <div class="waldman-about-service-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <h3 class="waldman-about-service-title">Commercial Electrical</h3>
+            <p class="waldman-about-service-text">
+              Professional electrical services for businesses of all sizes,
+              ensuring safety and efficiency.
+            </p>
+            <a
+              href="/commercial-electric.html"
+              class="waldman-about-service-link"
+              >Learn More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="waldman-about-service-block">
+            <div class="waldman-about-service-icon">
+              <i class="fas fa-power-off"></i>
+            </div>
+            <h3 class="waldman-about-service-title">Generators</h3>
+            <p class="waldman-about-service-text">
+              Automatic and manual generators to keep your power on during
+              outages and emergencies.
+            </p>
+            <a href="/automatic.html" class="waldman-about-service-link"
+              >Learn More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="waldman-about-service-block">
+            <div class="waldman-about-service-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3 class="waldman-about-service-title">Lightning Protection</h3>
+            <p class="waldman-about-service-text">
+              Safeguard your property with professional lightning protection
+              systems and surge protection.
+            </p>
+            <a
+              href="/lightning-protection.html"
+              class="waldman-about-service-link"
+              >Learn More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specialties Section -->
+    <section class="waldman-about-specialties">
+      <div class="container">
+        <h2 class="waldman-about-specialties-title">Our Specialties</h2>
+        <div class="waldman-about-specialties-grid">
+          <div class="waldman-about-specialty-item">
+            <div class="waldman-about-specialty-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3 class="waldman-about-specialty-title">
+              Residential and Commercial
+            </h3>
+            <p class="waldman-about-specialty-text">
+              Complete electrical solutions for both homes and businesses,
+              delivered with expertise and care.
+            </p>
+          </div>
+
+          <div class="waldman-about-specialty-item">
+            <div class="waldman-about-specialty-icon">
+              <i class="fas fa-charging-station"></i>
+            </div>
+            <h3 class="waldman-about-specialty-title">
+              EV Chargers for Vehicles
+            </h3>
+            <p class="waldman-about-specialty-text">
+              Professional installation of electric vehicle charging stations
+              for your home or business.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="waldman-about-brands">
+      <div class="container">
+        <h2 class="waldman-about-brands-title">Trusted Brands We Work With</h2>
+        <div class="waldman-about-brands-grid">
+          <div class="waldman-about-brand-item">
+            <div class="waldman-about-brand-logo">
+              <img src="images/brands/cummins-logo.webp" alt="Cummins Logo" />
+            </div>
+            <h3 class="waldman-about-brand-name">Cummins</h3>
+          </div>
+
+          <div class="waldman-about-brand-item">
+            <div class="waldman-about-brand-logo">
+              <img src="images/brands/onan-logo.webp" alt="Onan Logo" />
+            </div>
+            <h3 class="waldman-about-brand-name">Onan</h3>
+          </div>
+
+          <div class="waldman-about-brand-item">
+            <div class="waldman-about-brand-logo">
+              <img src="images/brands/generac-logo.webp" alt="Generac Logo" />
+            </div>
+            <h3 class="waldman-about-brand-name">Generac</h3>
+          </div>
+
+          <div class="waldman-about-brand-item">
+            <div class="waldman-about-brand-logo">
+              <img src="images/brands/kohler-logo.webp" alt="Kohler Logo" />
+            </div>
+            <h3 class="waldman-about-brand-name">Kohler</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="waldman-about-cta">
+      <div class="container">
+        <h2 class="waldman-about-cta-title">Ready to Start Your Project?</h2>
+        <p class="waldman-about-cta-text">
+          Contact us today for a free estimate on your electrical needs.
+        </p>
+        <div class="waldman-about-cta-buttons">
+          <a href="tel:6103720151" class="waldman-about-cta-btn">
+            <i class="fas fa-phone-alt"></i> (610) 372-0151
+          </a>
+          <a href="/request-a-service.html" class="waldman-about-cta-btn">
+            <i class="fas fa-wrench"></i> Request a Service
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>SERVICING</h3>
+          </div>
+          <p>Berks County, PA<br />and Surrounding Areas</p>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-clock"></i>
+            <h3>HOURS</h3>
+          </div>
+          <div class="hours-grid">
+            <span>Mon - Fri</span>
+            <span>8:00 am - 4:00 pm</span>
+            <span>Sat</span>
+            <span>Closed</span>
+            <span>Sun</span>
+            <span>Closed</span>
+          </div>
+          <p>24/7 Emergency Service, Same-Day Service</p>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-phone-alt"></i>
+            <h3>CONTACT US</h3>
+          </div>
+          <p>
+            Main: (610) 372-0151<br />
+            Toll Free: (800) 672-0151<br />
+            <a href="mailto:service@waldmanelectric.com"
+              >service@waldmanelectric.com</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <div class="line"></div>
+        <a
+          href="https://www.facebook.com/WaldmanElectricCompany"
+          class="social-icon"
+          target="_blank"
+          rel="noopener">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <div class="line"></div>
+      </div>
+
+      <div class="footer-links">
+        <a href="privacy-policy.html" target="_blank" rel="noopener"
+          >Privacy Policy</a
+        >
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

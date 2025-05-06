@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Waldman Electrical Contractors</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav class="main-nav">
+        <div class="logo-container">
+          <a href="/">
+            <img
+              src="https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Contact/waldman-logo.webp"
+              alt="Waldman Electrical Contractors Logo"
+              class="logo" />
+          </a>
+        </div>
+
+        <!-- DESKTOP NAVIGATION -->
+        <ul class="nav-links desktop-links">
+          <li>
+            <a href="/">Home <span class="nav-indicator"></span></a>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">Electric Services</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/residential-electric.html"
+                ><i class="fas fa-home"></i> Residential Electric</a
+              >
+              <a href="/commercial-electric.html"
+                ><i class="fas fa-building"></i> Commercial Electric</a
+              >
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">Generators</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/automatic.html"
+                ><i class="fas fa-power-off"></i> Automatic Generators</a
+              >
+              <a href="/manual.html"
+                ><i class="fas fa-cog"></i> Manual Generators</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="/lightning-protection.html"
+              >Lightning Protection <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li>
+            <a href="/reviews.html"
+              >Reviews <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">About</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/about.html"><i class="fas fa-info-circle"></i> About</a>
+              <a href="/waldman-history.html"
+                ><i class="fas fa-history"></i> Waldman History</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="/gallery.html"
+              >Gallery <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="contact-link active">
+              <span class="nav-text">Contact</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/contact.html" class="active"
+                ><i class="fas fa-envelope"></i> Contact</a
+              >
+              <a href="/request-a-service.html"
+                ><i class="fas fa-wrench"></i> Request a Service</a
+              >
+            </div>
+          </li>
+        </ul>
+
+        <!-- MOBILE NAVIGATION -->
+        <div class="mobile-nav">
+          <!-- Open Status for Mobile -->
+          <div class="mobile-status">
+            <span class="open-status">
+              <!-- This will be populated by JavaScript -->
+            </span>
+            <a href="/" class="mobile-home-button" aria-label="Go to homepage">
+              <i class="fas fa-home"></i>
+            </a>
+          </div>
+
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-links mobile-links">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li class="dropdown">
+              <a href="#">
+                Electric Services <i class="fas fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-content">
+                <a href="/residential-electric.html"
+                  ><i class="fas fa-home"></i> Residential Electric</a
+                >
+                <a href="/commercial-electric.html"
+                  ><i class="fas fa-building"></i> Commercial Electric</a
+                >
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#">Generators <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-content">
+                <a href="/automatic.html"
+                  ><i class="fas fa-power-off"></i> Automatic Generators</a
+                >
+                <a href="/manual.html"
+                  ><i class="fas fa-cog"></i> Manual Generators</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="/lightning-protection.html">Lightning Protection</a>
+            </li>
+            <li>
+              <a href="/reviews.html">Reviews</a>
+            </li>
+            <li class="dropdown">
+              <a href="#">About <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-content">
+                <a href="/about.html"
+                  ><i class="fas fa-info-circle"></i> About</a
+                >
+                <a href="/waldman-history.html"
+                  ><i class="fas fa-history"></i> Waldman History</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="/gallery.html">Gallery</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="contact-link active"
+                >Contact <i class="fas fa-chevron-down"></i
+              ></a>
+              <div class="dropdown-content">
+                <a href="/contact.html" class="active"
+                  ><i class="fas fa-envelope"></i> Contact</a
+                >
+                <a href="/request-a-service.html"
+                  ><i class="fas fa-wrench"></i> Request a Service</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Floating phone for mobile -->
+    <div class="floating-phone">
+      <a href="tel:6103720151">
+        <i class="fas fa-phone-alt"></i> (610) 372-0151
+      </a>
+    </div>
+
+    <!-- Contact Page Hero -->
+    <div class="contact-page-hero">
+      <div class="contact-page-hero-overlay"></div>
+      <div class="container">
+        <div class="contact-page-hero-content">
+          <div class="contact-page-badge">Contact Us</div>
+          <h1 class="contact-page-hero-title">Get In Touch</h1>
+          <div class="contact-page-hero-subtitle">
+            We're ready to solve your electrical needs
+          </div>
+
+          <!-- Stats Bar -->
+          <div class="contact-page-stats">
+            <div class="contact-page-stat-item">
+              <div class="contact-page-stat-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-page-stat-text">
+                <span class="contact-page-stat-value">(610) 372-0151</span>
+                <span class="contact-page-stat-label">Call Us Today</span>
+              </div>
+            </div>
+
+            <div class="contact-page-stat-item">
+              <div class="contact-page-stat-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <div class="contact-page-stat-text">
+                <span class="contact-page-stat-value">24/7</span>
+                <span class="contact-page-stat-label">Emergency Service</span>
+              </div>
+            </div>
+
+            <div class="contact-page-stat-item">
+              <div class="contact-page-stat-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="contact-page-stat-text">
+                <div class="open-status"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Intro Section -->
+    <section class="contact-intro-section">
+      <div class="container">
+        <div class="contact-intro-content">
+          <div class="contact-intro-left">
+            <h2 class="contact-intro-heading">Reach Out to Our Expert Team</h2>
+            <div class="contact-intro-divider"></div>
+            <p class="contact-intro-text">
+              With over 100 years of service in Berks County, our team of highly
+              skilled electricians is ready to assist with all your electrical
+              needs. We pride ourselves on our prompt response, quality
+              workmanship, and exceptional customer service.
+            </p>
+            <p class="contact-intro-text">
+              Whether you need residential or commercial electrical services,
+              generator installation, or lightning protection, our
+              factory-trained technicians are here to help. All our work is
+              warranted!
+            </p>
+          </div>
+          <div class="contact-intro-right">
+            <div class="contact-intro-image">
+              <img
+                src="images/contact/electrician-team.webp"
+                alt="Waldman Electrical Team"
+                class="contact-team-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info-section">
+      <div class="container">
+        <div class="contact-info-grid">
+          <div class="contact-info-card">
+            <div class="contact-info-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3>Call Us</h3>
+            <p>
+              <a href="tel:6103720151">(610) 372-0151</a><br />
+              <a href="tel:8006720151">(800) 672-0151</a> Toll Free
+            </p>
+            <p class="contact-info-note">24/7 Emergency Service Available</p>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email Us</h3>
+            <p>
+              <a href="mailto:service@waldmanelectric.com"
+                >service@waldmanelectric.com</a
+              >
+            </p>
+            <p class="contact-info-note">We'll respond within 24 hours</p>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Business Hours</h3>
+            <div class="contact-hours">
+              <div class="contact-hours-row">
+                <span>Monday - Friday:</span>
+                <span>8:00 am - 4:00 pm</span>
+              </div>
+              <div class="contact-hours-row">
+                <span>Saturday & Sunday:</span>
+                <span>Closed</span>
+              </div>
+            </div>
+            <p class="contact-info-note">Same-Day Service Available</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+      <div class="container">
+        <div class="contact-form-container">
+          <div class="contact-form-content">
+            <h2>Send Us a Message</h2>
+            <p>
+              Please fill out this short form and we'll contact you shortly.
+            </p>
+
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name">Full Name*</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number*</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+
+              <div class="form-group">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service">
+                  <option value="">Select a Service...</option>
+                  <option value="residential">Residential Electric</option>
+                  <option value="commercial">Commercial Electric</option>
+                  <option value="automatic-generators">
+                    Automatic Generators
+                  </option>
+                  <option value="manual-generators">Manual Generators</option>
+                  <option value="lightning">Lightning Protection</option>
+                  <option value="other">Other (Please specify)</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="message">Your Message*</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required></textarea>
+              </div>
+
+              <div class="form-group recaptcha-container">
+                <div class="recaptcha-placeholder">
+                  This site is protected by reCAPTCHA.
+                </div>
+              </div>
+
+              <div class="form-group submit-container">
+                <button type="submit" class="contact-submit-btn">
+                  <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas Section -->
+    <section class="service-areas-section">
+      <div class="container">
+        <div class="service-areas-container">
+          <h2>Areas We Service</h2>
+          <p>
+            Proudly serving Berks County and surrounding areas for over 100
+            years.
+          </p>
+
+          <div class="service-areas-grid">
+            <div class="service-area-column">
+              <ul class="service-area-list">
+                <li>Adamstown</li>
+                <li>Alsace Manor</li>
+                <li>Amity Gardens</li>
+                <li>Angelica</li>
+                <li>Baumstown</li>
+                <li>Bechtelsville</li>
+                <li>Bernville</li>
+                <li>Birdsboro</li>
+                <li>Blandon</li>
+                <li>Bowmansville</li>
+                <li>Boyertown</li>
+                <li>Breinigsville</li>
+                <li>Brownsville</li>
+                <li>Colony Park</li>
+              </ul>
+            </div>
+
+            <div class="service-area-column">
+              <ul class="service-area-list">
+                <li>Denver</li>
+                <li>Douglassville</li>
+                <li>Elverson</li>
+                <li>Exeter Township</li>
+                <li>Fleetwood</li>
+                <li>Flying Hills</li>
+                <li>Fritztown</li>
+                <li>Geigertown</li>
+                <li>Gibralter</li>
+                <li>Gilbertsville</li>
+                <li>Gouglersville</li>
+                <li>Greenfields</li>
+                <li>Grill</li>
+                <li>Green Hills</li>
+              </ul>
+            </div>
+
+            <div class="service-area-column">
+              <ul class="service-area-list">
+                <li>Hamburg</li>
+                <li>Jacksonwald</li>
+                <li>Knauers</li>
+                <li>Kutztown</li>
+                <li>Laureldale</li>
+                <li>Leesport</li>
+                <li>Limekiln</li>
+                <li>Lincoln Park</li>
+                <li>Lorane</li>
+                <li>Lyons</li>
+                <li>Maple Grove</li>
+                <li>Maxatawny</li>
+                <li>Mertztown</li>
+                <li>Mohnton</li>
+              </ul>
+            </div>
+
+            <div class="service-area-column">
+              <ul class="service-area-list">
+                <li>Morgantown</li>
+                <li>Mt. Penn</li>
+                <li>Muhlenberg</li>
+                <li>New Morgan</li>
+                <li>Newmanstown</li>
+                <li>Oley</li>
+                <li>Ontelaunee</li>
+                <li>Pennside</li>
+                <li>Plowville</li>
+                <li>Port Clinton</li>
+                <li>Pricetown</li>
+                <li>Reading</li>
+                <li>Reiffton</li>
+                <li>Reinholds</li>
+              </ul>
+            </div>
+
+            <div class="service-area-column">
+              <ul class="service-area-list">
+                <li>Robesonia</li>
+                <li>Shillington</li>
+                <li>Shoemakersville</li>
+                <li>Sinking Spring</li>
+                <li>Spring Ridge</li>
+                <li>St. Lawrence</li>
+                <li>Stonersville</li>
+                <li>Temple</li>
+                <li>Topton</li>
+                <li>Vinemont</li>
+                <li>Virginville</li>
+                <li>Warwick</li>
+                <li>Wernersville</li>
+                <li>West Lawn</li>
+              </ul>
+            </div>
+
+            <div class="service-area-column">
+              <ul class="service-area-list">
+                <li>West Reading</li>
+                <li>Whitfield</li>
+                <li>Womelsdorf</li>
+                <li>Wyomissing</li>
+                <li>Yellow House</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="contact-cta-section">
+      <div class="container">
+        <div class="contact-cta-container">
+          <div class="contact-cta-content">
+            <h2>Need Emergency Service?</h2>
+            <p>
+              Our technicians are available 24/7 for your electrical
+              emergencies.
+            </p>
+            <a href="tel:6103720151" class="contact-cta-button">
+              <i class="fas fa-bolt"></i> Call Now: (610) 372-0151
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>SERVICING</h3>
+          </div>
+          <p>Berks County, PA<br />and Surrounding Areas</p>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-clock"></i>
+            <h3>HOURS</h3>
+          </div>
+          <div class="hours-grid">
+            <span>Mon - Fri</span>
+            <span>8:00 am - 4:00 pm</span>
+            <span>Sat</span>
+            <span>Closed</span>
+            <span>Sun</span>
+            <span>Closed</span>
+          </div>
+          <p>24/7 Emergency Service, Same-Day Service</p>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-phone-alt"></i>
+            <h3>CONTACT US</h3>
+          </div>
+          <p>
+            Main: (610) 372-0151<br />
+            Toll Free: (800) 672-0151<br />
+            <a href="mailto:service@waldmanelectric.com"
+              >service@waldmanelectric.com</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <div class="line"></div>
+        <a
+          href="https://www.facebook.com/WaldmanElectricCompany"
+          class="social-icon"
+          target="_blank"
+          rel="noopener">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <div class="line"></div>
+      </div>
+
+      <div class="footer-links">
+        <a href="privacy-policy.html" target="_blank" rel="noopener"
+          >Privacy Policy</a
+        >
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manual Generator Sales - Waldman Electrical Contractors</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav class="main-nav">
+        <div class="logo-container">
+          <a href="/">
+            <img
+              src="https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Manual/waldman-logo.webp"
+              alt="Waldman Electrical Contractors Logo"
+              class="logo" />
+          </a>
+        </div>
+
+        <!-- DESKTOP NAVIGATION -->
+        <ul class="nav-links desktop-links">
+          <li>
+            <a href="/">Home <span class="nav-indicator"></span></a>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">Electric Services</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/residential-electric.html"
+                ><i class="fas fa-home"></i> Residential Electric</a
+              >
+              <a href="/commercial-electric.html"
+                ><i class="fas fa-building"></i> Commercial Electric</a
+              >
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">Generators</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/automatic.html"
+                ><i class="fas fa-power-off"></i> Automatic Generators</a
+              >
+              <a href="/manual.html"
+                ><i class="fas fa-cog"></i> Manual Generators</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="/lightning-protection.html"
+              >Lightning Protection <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li>
+            <a href="/reviews.html"
+              >Reviews <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">About</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/about.html"><i class="fas fa-info-circle"></i> About</a>
+              <a href="/waldman-history.html"
+                ><i class="fas fa-history"></i> Waldman History</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="/gallery.html"
+              >Gallery <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="contact-link">
+              <span class="nav-text">Contact</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/contact.html"
+                ><i class="fas fa-envelope"></i> Contact</a
+              >
+              <a href="/request-a-service.html"
+                ><i class="fas fa-wrench"></i> Request a Service</a
+              >
+            </div>
+          </li>
+        </ul>
+
+        <!-- MOBILE NAVIGATION -->
+        <div class="mobile-nav">
+          <!-- Open Status for Mobile -->
+          <div class="mobile-status">
+            <span class="open-status">
+              <!-- This will be populated by JavaScript -->
+            </span>
+            <a href="/" class="mobile-home-button" aria-label="Go to homepage">
+              <i class="fas fa-home"></i>
+            </a>
+          </div>
+
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-links mobile-links">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li class="dropdown">
+              <a href="#">
+                Electric Services <i class="fas fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-content">
+                <a href="/residential-electric.html"
+                  ><i class="fas fa-home"></i> Residential Electric</a
+                >
+                <a href="/commercial-electric.html"
+                  ><i class="fas fa-building"></i> Commercial Electric</a
+                >
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#">Generators <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-content">
+                <a href="/automatic.html"
+                  ><i class="fas fa-power-off"></i> Automatic Generators</a
+                >
+                <a href="/manual.html"
+                  ><i class="fas fa-cog"></i> Manual Generators</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="/lightning-protection.html">Lightning Protection</a>
+            </li>
+            <li>
+              <a href="/reviews.html">Reviews</a>
+            </li>
+            <li class="dropdown">
+              <a href="#">About <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-content">
+                <a href="/about.html"
+                  ><i class="fas fa-info-circle"></i> About</a
+                >
+                <a href="/waldman-history.html"
+                  ><i class="fas fa-history"></i> Waldman History</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="/gallery.html">Gallery</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="contact-link"
+                >Contact <i class="fas fa-chevron-down"></i
+              ></a>
+              <div class="dropdown-content">
+                <a href="/contact.html"
+                  ><i class="fas fa-envelope"></i> Contact</a
+                >
+                <a href="/request-a-service.html"
+                  ><i class="fas fa-wrench"></i> Request a Service</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Floating phone for mobile -->
+    <div class="floating-phone">
+      <a href="tel:6103720151">
+        <i class="fas fa-phone-alt"></i> (610) 372-0151
+      </a>
+    </div>
+
+    <!-- New Manual Generator Header Design -->
+    <div class="mg-manual-hero">
+      <div class="mg-manual-hero-overlay"></div>
+      <div class="container">
+        <div class="mg-manual-hero-content">
+          <div class="mg-manual-badge">Manual Generators</div>
+          <h1 class="mg-manual-hero-title">Portable Power Solutions</h1>
+          <div class="mg-manual-hero-subtitle">
+            Connect Your Generator Safely and Efficiently
+          </div>
+
+          <!-- Stats Bar -->
+          <div class="mg-manual-stats">
+            <div class="mg-manual-stat-item">
+              <div class="mg-manual-stat-icon">
+                <i class="fas fa-cog"></i>
+              </div>
+              <div class="mg-manual-stat-text">
+                <span class="mg-manual-stat-value">Safe</span>
+                <span class="mg-manual-stat-label">Generator Hookup</span>
+              </div>
+            </div>
+
+            <div class="mg-manual-stat-item">
+              <div class="mg-manual-stat-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="mg-manual-stat-text">
+                <span class="mg-manual-stat-value">45+</span>
+                <span class="mg-manual-stat-label">Years of Experience</span>
+              </div>
+            </div>
+
+            <div class="mg-manual-stat-item">
+              <div class="mg-manual-stat-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="mg-manual-stat-text">
+                <div class="open-status"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Manual Generator Intro Section -->
+    <section class="mg-manual-intro-new">
+      <div class="container">
+        <div class="mg-manual-intro-content">
+          <div class="mg-manual-intro-left">
+            <h2 class="mg-manual-intro-heading">
+              Emergency Power Made Easy With a Manual Transfer Switch
+            </h2>
+            <div class="mg-manual-intro-divider"></div>
+            <p class="mg-manual-intro-text">
+              Manual transfer switches allow you to harness the full power of
+              your portable generator and safely deliver it directly to your
+              home's electrical system. This allows you to back up your most
+              critical appliances without running extension cords.
+            </p>
+            <p class="mg-manual-intro-text">
+              And you can back up hard-wired appliances, like your furnace or
+              well pump. Added convenience when you need it most. Call Waldman
+              Electrical Contractors for details.
+            </p>
+          </div>
+          <div class="mg-manual-intro-right">
+            <div class="mg-manual-intro-image">
+              <img
+                src="https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Manual/manual-gen.webp"
+                alt="Manual Generator Transfer Switch Installation"
+                class="mg-manual-product-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Generator Features Section -->
+    <section class="generator-features manual-features">
+      <div class="container">
+        <h2>Our Manual Transfer Switches Include:</h2>
+        <div class="feature-cards">
+          <div class="feature-card feature-card-1">
+            <div class="feature-icon">
+              <i class="fas fa-plug"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Select-Circuit Options</h3>
+              <p>
+                Choose 6 to 16 select household circuits to power during an
+                outage
+              </p>
+            </div>
+          </div>
+          <div class="feature-card feature-card-2">
+            <div class="feature-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Expandable System</h3>
+              <p>
+                Easily expand your transfer switch by adding more circuit
+                breakers
+              </p>
+            </div>
+          </div>
+          <div class="feature-card feature-card-1">
+            <div class="feature-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Flexible Installation</h3>
+              <p>
+                Surface or flush mounted indoors next to existing electrical
+                panel
+              </p>
+            </div>
+          </div>
+          <div class="feature-card feature-card-2">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Code Compliant</h3>
+              <p>
+                Accommodates Arc fault and GFCI breakers to meet current code
+                requirements
+              </p>
+            </div>
+          </div>
+          <div class="feature-card feature-card-1">
+            <div class="feature-icon">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Load Management</h3>
+              <p>
+                Wattmeters help you balance generator loads to prolong engine
+                life
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="manual-cta">
+      <div class="container">
+        <h2 class="section-title">
+          Portable Generator Select-Circuit Transfer Switches
+        </h2>
+
+        <!-- Row 1: Text left, Image right -->
+        <div class="cta-row cta-row-standard">
+          <div class="cta-text cta-text-row1">
+            <p>
+              Select-circuit transfer switches allow you to choose 6 to 16
+              select household circuits to power during an outage. If your needs
+              change and later you choose to power more, your installer can
+              easily expand the transfer switch by just adding more circuit
+              breakers.
+            </p>
+          </div>
+          <div class="cta-image cta-image-row1">
+            <img
+              src="https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Manual/manual-transfer.webp"
+              alt="Manual Transfer Switch Panel" />
+          </div>
+        </div>
+
+        <!-- Row 2: Image left, Text right with split text on mobile -->
+        <div class="cta-row cta-row-split">
+          <div class="cta-text cta-text-row2">
+            <p class="text-first">
+              Ideal for powering your furnace blower (gas or oil only),
+              refrigerator and kitchen circuits, well pump, water heater,
+              lights, security system, garage door opener, and television.
+            </p>
+            <div class="mobile-image-insert">
+              <img
+                src="https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Manual/neighborhood-power-outage.webp"
+                alt="Portable Generator Connection" />
+            </div>
+            <p class="text-second">
+              The enclosure can be surface or flush, mounted indoors next to an
+              existing electrical panel in a basement, interior room, or garage.
+            </p>
+          </div>
+          <div class="cta-image cta-image-row2">
+            <img
+              src="https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Manual/neighborhood-power-outage.webp"
+              alt="Portable Generator Connection" />
+          </div>
+        </div>
+
+        <!-- Row 3: Text left, Image right -->
+        <div class="cta-row cta-row-standard">
+          <div class="cta-text cta-text-row3">
+            <p>
+              These transfer switches accommodate Arc fault and GFCI breakers to
+              meet current code requirements. Wattmeters help you balance
+              generator loads to prolong engine life. UL Listed in USA and
+              Canada.
+            </p>
+          </div>
+          <div class="cta-image cta-image-row3">
+            <img
+              src="https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Manual/gfci-breaker.webp"
+              alt="Circuit Panel with GFCI Breakers" />
+          </div>
+        </div>
+
+        <!-- Final CTA -->
+        <div class="cta-footer">
+          <h2>Let Us Help You Prepare for Power Outages</h2>
+          <p>
+            Call us today for a FREE estimate on your manual generator hook-up.
+          </p>
+          <a href="tel:6103720151" class="hero-btn">
+            <i class="fas fa-phone-alt"></i> (610) 372-0151
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>SERVICING</h3>
+          </div>
+          <p>Berks County, PA<br />and Surrounding Areas</p>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-clock"></i>
+            <h3>HOURS</h3>
+          </div>
+          <div class="hours-grid">
+            <span>Mon - Fri</span>
+            <span>8:00 am - 4:00 pm</span>
+            <span>Sat</span>
+            <span>Closed</span>
+            <span>Sun</span>
+            <span>Closed</span>
+          </div>
+          <p>24/7 Emergency Service, Same-Day Service</p>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-phone-alt"></i>
+            <h3>CONTACT US</h3>
+          </div>
+          <p>
+            Main: (610) 372-0151<br />
+            Toll Free: (800) 672-0151<br />
+            <a href="mailto:service@waldmanelectric.com"
+              >service@waldmanelectric.com</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <div class="line"></div>
+        <a
+          href="https://www.facebook.com/WaldmanElectricCompany"
+          class="social-icon"
+          target="_blank"
+          rel="noopener"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <div class="line"></div>
+      </div>
+
+      <div class="footer-links">
+        <a href="privacy-policy.html" target="_blank" rel="noopener"
+          >Privacy Policy</a
+        >
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

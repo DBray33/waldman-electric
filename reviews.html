@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Reviews - Waldman Electrical Contractors</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav class="main-nav">
+        <div class="logo-container">
+          <a href="/">
+            <img
+              src="https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Reviews/waldman-logo.webp"
+              alt="Waldman Electrical Contractors Logo"
+              class="logo" />
+          </a>
+        </div>
+
+        <!-- DESKTOP NAVIGATION -->
+        <ul class="nav-links desktop-links">
+          <li>
+            <a href="/">Home <span class="nav-indicator"></span></a>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">Electric Services</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/residential-electric.html"
+                ><i class="fas fa-home"></i> Residential Electric</a
+              >
+              <a href="/commercial-electric.html"
+                ><i class="fas fa-building"></i> Commercial Electric</a
+              >
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">Generators</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/automatic.html"
+                ><i class="fas fa-power-off"></i> Automatic Generators</a
+              >
+              <a href="/manual.html"
+                ><i class="fas fa-cog"></i> Manual Generators</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="/lightning-protection.html"
+              >Lightning Protection <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li>
+            <a href="/reviews.html"
+              >Reviews <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">About</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/about.html"><i class="fas fa-info-circle"></i> About</a>
+              <a href="/waldman-history.html"
+                ><i class="fas fa-history"></i> Waldman History</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="/gallery.html"
+              >Gallery <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="contact-link">
+              <span class="nav-text">Contact</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/contact.html"
+                ><i class="fas fa-envelope"></i> Contact</a
+              >
+              <a href="/request-a-service.html"
+                ><i class="fas fa-wrench"></i> Request a Service</a
+              >
+            </div>
+          </li>
+        </ul>
+
+        <!-- MOBILE NAVIGATION -->
+        <div class="mobile-nav">
+          <!-- Open Status for Mobile -->
+          <div class="mobile-status">
+            <span class="open-status">
+              <!-- This will be populated by JavaScript -->
+            </span>
+            <a href="/" class="mobile-home-button" aria-label="Go to homepage">
+              <i class="fas fa-home"></i>
+            </a>
+          </div>
+
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-links mobile-links">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li class="dropdown">
+              <a href="#">
+                Electric Services <i class="fas fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-content">
+                <a href="/residential-electric.html"
+                  ><i class="fas fa-home"></i> Residential Electric</a
+                >
+                <a href="/commercial-electric.html"
+                  ><i class="fas fa-building"></i> Commercial Electric</a
+                >
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#">Generators <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-content">
+                <a href="/automatic.html"
+                  ><i class="fas fa-power-off"></i> Automatic Generators</a
+                >
+                <a href="/manual.html"
+                  ><i class="fas fa-cog"></i> Manual Generators</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="/lightning-protection.html">Lightning Protection</a>
+            </li>
+            <li>
+              <a href="/reviews.html">Reviews</a>
+            </li>
+            <li class="dropdown">
+              <a href="#">About <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-content">
+                <a href="/about.html"
+                  ><i class="fas fa-info-circle"></i> About</a
+                >
+                <a href="/waldman-history.html"
+                  ><i class="fas fa-history"></i> Waldman History</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="/gallery.html">Gallery</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="contact-link"
+                >Contact <i class="fas fa-chevron-down"></i
+              ></a>
+              <div class="dropdown-content">
+                <a href="/contact.html"
+                  ><i class="fas fa-envelope"></i> Contact</a
+                >
+                <a href="/request-a-service.html"
+                  ><i class="fas fa-wrench"></i> Request a Service</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Floating phone for mobile -->
+    <div class="floating-phone">
+      <a href="tel:6103720151">
+        <i class="fas fa-phone-alt"></i> (610) 372-0151
+      </a>
+    </div>
+
+    <!-- New Reviews Hero Design -->
+    <div class="rv-reviews-hero">
+      <div class="rv-reviews-hero-overlay"></div>
+      <div class="container">
+        <div class="rv-reviews-hero-content">
+          <div class="rv-reviews-badge">Customer Feedback</div>
+          <h1 class="rv-reviews-hero-title">Customer Reviews</h1>
+          <div class="rv-reviews-hero-subtitle">
+            What Our Clients Say About Our Service
+          </div>
+
+          <!-- Stats Bar -->
+          <div class="rv-reviews-stats">
+            <div class="rv-reviews-stat-item">
+              <div class="rv-reviews-stat-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="rv-reviews-stat-text">
+                <span class="rv-reviews-stat-value">Trusted</span>
+                <span class="rv-reviews-stat-label">Since 1918</span>
+              </div>
+            </div>
+
+            <div class="rv-reviews-stat-item">
+              <div class="rv-reviews-stat-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="rv-reviews-stat-text">
+                <span class="rv-reviews-stat-value">45+</span>
+                <span class="rv-reviews-stat-label">Years of Experience</span>
+              </div>
+            </div>
+
+            <div class="rv-reviews-stat-item">
+              <div class="rv-reviews-stat-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="rv-reviews-stat-text">
+                <div class="open-status"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews Intro -->
+    <section class="reviews-intro">
+      <div class="container">
+        <h2>What Our Customers Are Saying</h2>
+        <p>
+          At Waldman Electrical Contractors, we take pride in providing
+          exceptional electrical services to Berks County and surrounding areas
+          since 1918. Don't just take our word for it - see what our satisfied
+          customers have to say about our work!
+        </p>
+
+        <div class="reviews-summary">
+          <div class="rating-overview">
+            <div class="rating-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="rating-text">
+              <span class="rating-number">4.4</span>
+              <span class="rating-count"
+                >Based on <span id="total-reviews">20</span> Google
+                Reviews</span
+              >
+            </div>
+          </div>
+          <div class="leave-review">
+            <a
+              href="https://www.google.com/search?sca_esv=50afecde28fc5d24&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzWpZE4yG782cDYPboWLZjdioMCjFL3S50qpBlXdpTzd-AsYgFjNw6swLxVrQZRxTtr3fcRpHYp6mENR7kMslGrj1pcHblcYO6RbtmuccffIewN8nsA%3D%3D&q=Waldman+Electrical+Contractors+Reviews&sa=X&ved=2ahUKEwiMruyg_YSNAxWvMlkFHRJ1A1MQ0bkNegQIOxAE&biw=1566&bih=968#lrd=0x89c6712a27d00ff5:0x96fc752230ccf2d9,3,,,,"
+              class="hero-btn"
+              target="_blank"
+              rel="noopener">
+              <i class="fas fa-pencil-alt"></i> Leave a Review
+            </a>
+          </div>
+        </div>
+        <!-- Added Scroll Down Link -->
+        <div class="scroll-to-reviews">
+          <a href="#customer-reviews" class="scroll-down-link">
+            Reviews Below <i class="fas fa-arrow-down"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section class="maps-section">
+      <div class="container">
+        <h2>Our Location</h2>
+        <div class="maps-container">
+          <div id="google-map">
+            <!-- Google Maps with enhanced pin marker -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1222.0734675587307!2d-75.94821270026167!3d40.33516088695127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6772c7f5a0091%3A0x2e82efe8a79f8d2b!2sWaldman%20Electric%20Co!5e0!3m2!1sen!2sus!4v1714014952766!5m2!1sen!2sus"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <div class="map-info">
+            <div class="map-address">
+              <h3><i class="fas fa-map-marker-alt"></i> Our Location</h3>
+              <address>
+                Waldman Electric Co<br />
+                517 Franklin St<br />
+                West Reading, PA 19611
+              </address>
+              <a
+                href="https://maps.google.com/maps?ll=40.335161,-75.947545&z=16&t=m&hl=en&gl=US&mapclient=embed&q=517%20Franklin%20St%20West%20Reading%2C%20PA%2019611"
+                class="directions-link"
+                target="_blank"
+                rel="noopener">
+                <i class="fas fa-directions"></i> Get Directions
+              </a>
+            </div>
+            <div class="map-contact">
+              <h3><i class="fas fa-phone-alt"></i> Contact</h3>
+              <p>
+                <a href="tel:6103720151">Main: (610) 372-0151</a><br />
+                <a href="tel:8006720151">Toll Free: (800) 672-0151</a><br />
+                <a href="mailto:service@waldmanelectric.com"
+                  >service@waldmanelectric.com</a
+                >
+              </p>
+            </div>
+            <div class="map-hours">
+              <h3><i class="fas fa-clock"></i> Hours</h3>
+              <p>
+                Monday - Friday: 8:00 am - 4:00 pm<br />
+                Saturday & Sunday: Closed<br />
+                <strong>24/7 Emergency Service, Same-Day Service</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="google-reviews-section" id="customer-reviews">
+      <div class="container">
+        <h2>Our Customer Reviews</h2>
+        <div class="reviews-container">
+          <div class="reviews-grid">
+            <!-- BJ Ellis Review -->
+            <div class="review-item featured-review">
+              <div class="review-header">
+                <div class="reviewer-image-placeholder">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="reviewer-info">
+                  <div class="reviewer-name">BJ Ellis</div>
+                  <div class="review-date">9 months ago</div>
+                </div>
+              </div>
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="review-text">
+                These folks were absolute delight to work with. One of them came
+                over for an estimate and discovered a major problem with my
+                circuit breaker (there was water coming in from the outside).
+                Got a very reasonable estimate plus the work I needed to be done
+                on the outside. Scheduled their arrival very quickly and the two
+                electricians did a wonderful job installing the new plug and
+                fixing my wiring issue. Chip and Mike were very skilled at what
+                they did.
+              </div>
+              <div class="review-tags">
+                <span class="review-tag">Circuit Breaker Repair</span>
+                <span class="review-tag">Quality Service</span>
+              </div>
+            </div>
+
+            <!-- Amasar 63 Review -->
+            <div class="review-item">
+              <div class="review-header">
+                <div class="reviewer-image-placeholder">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="reviewer-info">
+                  <div class="reviewer-name">Amasar 63</div>
+                  <div class="review-date">6 days ago</div>
+                  <div class="review-recent-tag">New</div>
+                </div>
+              </div>
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="review-text">
+                Had a great experience with Waldman's. A tree knocked our meter
+                off the wall in a storm, Waldman's came out quickly and did a
+                great job. Thanks!
+              </div>
+              <div class="review-tags">
+                <span class="review-tag">Emergency Service</span>
+                <span class="review-tag">Meter Repair</span>
+              </div>
+            </div>
+
+            <!-- Alan Ganas Review -->
+            <div class="review-item">
+              <div class="review-header">
+                <div class="reviewer-image-placeholder">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="reviewer-info">
+                  <div class="reviewer-name">Alan Ganas</div>
+                  <div class="review-date">6 months ago</div>
+                </div>
+              </div>
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="review-text">
+                Excellent experience. Staff very knowledgeable and friendly. On
+                time service. Got the job done the first time. Big or small jobs
+                would highly recommend Waldman electric.
+              </div>
+              <div class="review-tags">
+                <span class="review-tag">Professional Staff</span>
+                <span class="review-tag">On-Time Service</span>
+              </div>
+            </div>
+
+            <!-- Patricia Ohrenich Review -->
+            <div class="review-item">
+              <div class="review-header">
+                <div class="reviewer-image-placeholder">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="reviewer-info">
+                  <div class="reviewer-name">Patricia Ohrenich</div>
+                  <div class="review-date">9 months ago</div>
+                </div>
+              </div>
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="review-text">
+                We contacted Waldman on an emergency referral and couldn't be
+                more pleased! Our work was completed in one day! Thanx!!
+              </div>
+              <div class="review-tags">
+                <span class="review-tag">Same-Day Service</span>
+                <span class="review-tag">Emergency Work</span>
+              </div>
+            </div>
+
+            <!-- Michelle Alesin Review -->
+            <div class="review-item">
+              <div class="review-header">
+                <div class="reviewer-image-placeholder">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="reviewer-info">
+                  <div class="reviewer-name">Michelle Alesin</div>
+                  <div class="review-date">11 months ago</div>
+                </div>
+              </div>
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="review-text">
+                My first time using Waldman Electric and I am very pleased this
+                will be the go to company from now on. Chip Phillips took the
+                time to explain everything to me and made a plan on all my
+                various concerns. You can be proud to have such a great employee
+                to represent your company, he was very knowledgeable, respectful
+                and courteous.
+              </div>
+              <div class="review-tags">
+                <span class="review-tag">Great Communication</span>
+                <span class="review-tag">Knowledgeable Staff</span>
+              </div>
+            </div>
+
+            <!-- Ralph Ganter Review -->
+            <div class="review-item">
+              <div class="review-header">
+                <div class="reviewer-image-placeholder">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="reviewer-info">
+                  <div class="reviewer-name">Ralph Ganter</div>
+                  <div class="review-date">9 months ago</div>
+                </div>
+              </div>
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="review-text">
+                100% impressed with the level of professionalism, craftsmanship
+                and courteousness of the crew! This level was way beyond what I
+                expected. WOW! Thanks Chip, Steve & Mike!
+              </div>
+              <div class="review-tags">
+                <span class="review-tag">Professionalism</span>
+                <span class="review-tag">Expert Craftsmanship</span>
+              </div>
+            </div>
+
+            <!-- Elizabeth Schinski Review -->
+            <div class="review-item">
+              <div class="review-header">
+                <div class="reviewer-image-placeholder">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="reviewer-info">
+                  <div class="reviewer-name">Elizabeth Schinski</div>
+                  <div class="review-date">11 months ago</div>
+                </div>
+              </div>
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="review-text">
+                All I can say is, Chip was amazing! Calling Waldman Electric was
+                the best thing my husband ever did!
+              </div>
+              <div class="review-tags">
+                <span class="review-tag">Excellent Staff</span>
+                <span class="review-tag">Highly Recommended</span>
+              </div>
+            </div>
+
+            <!-- Amneris Melendez Review -->
+            <div class="review-item">
+              <div class="review-header">
+                <div class="reviewer-image-placeholder">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="reviewer-info">
+                  <div class="reviewer-name">Amneris Melendez</div>
+                  <div class="review-date">a year ago</div>
+                </div>
+              </div>
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="review-text">
+                Great professional company, serviced my house and I am
+                completely pleased with the work. Will continue business with
+                them a trusted source.
+              </div>
+              <div class="review-tags">
+                <span class="review-tag">Trusted Service</span>
+                <span class="review-tag">Professional Work</span>
+              </div>
+            </div>
+
+            <!-- Rick Mogel Review -->
+            <div class="review-item">
+              <div class="review-header">
+                <div class="reviewer-image-placeholder">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="reviewer-info">
+                  <div class="reviewer-name">Rick Mogel</div>
+                  <div class="review-date">a year ago</div>
+                </div>
+              </div>
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="review-text">
+                Chip did a great job. Would highly recommend.
+              </div>
+              <div class="review-badges">
+                <span class="review-badge">Responsiveness</span>
+                <span class="review-badge">Punctuality</span>
+                <span class="review-badge">Quality</span>
+                <span class="review-badge">Professionalism</span>
+                <span class="review-badge">Value</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="view-all-reviews">
+          <a
+            href="https://www.google.com/search?sca_esv=50afecde28fc5d24&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzWpZE4yG782cDYPboWLZjdioMCjFL3S50qpBlXdpTzd-AsYgFjNw6swLxVrQZRxTtr3fcRpHYp6mENR7kMslGrj1pcHblcYO6RbtmuccffIewN8nsA%3D%3D&q=Waldman+Electrical+Contractors+Reviews&sa=X&ved=2ahUKEwiMruyg_YSNAxWvMlkFHRJ1A1MQ0bkNegQIOxAE&biw=1566&bih=968"
+            class="hero-btn"
+            target="_blank"
+            rel="noopener">
+            <i class="fab fa-google"></i> View All Google Reviews
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="reviews-cta">
+      <div class="container">
+        <h2>Ready to Experience Our Quality Service?</h2>
+        <p>Call us today for a FREE estimate on your electrical project.</p>
+        <div class="cta-buttons">
+          <a href="tel:6103720151" class="hero-btn">
+            <i class="fas fa-phone-alt"></i> (610) 372-0151
+          </a>
+          <a href="/request-a-service.html" class="hero-btn">
+            <i class="fas fa-wrench"></i> Request a Service
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>SERVICING</h3>
+          </div>
+          <p>Berks County, PA<br />and Surrounding Areas</p>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-clock"></i>
+            <h3>HOURS</h3>
+          </div>
+          <div class="hours-grid">
+            <span>Mon - Fri</span>
+            <span>8:00 am - 4:00 pm</span>
+            <span>Sat</span>
+            <span>Closed</span>
+            <span>Sun</span>
+            <span>Closed</span>
+          </div>
+          <p>24/7 Emergency Service, Same-Day Service</p>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-phone-alt"></i>
+            <h3>CONTACT US</h3>
+          </div>
+          <p>
+            Main: (610) 372-0151<br />
+            Toll Free: (800) 672-0151<br />
+            <a href="mailto:service@waldmanelectric.com"
+              >service@waldmanelectric.com</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <div class="line"></div>
+        <a
+          href="https://www.facebook.com/WaldmanElectricCompany"
+          class="social-icon"
+          target="_blank"
+          rel="noopener"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <div class="line"></div>
+      </div>
+
+      <div class="footer-links">
+        <a href="privacy-policy.html" target="_blank" rel="noopener"
+          >Privacy Policy</a
+        >
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

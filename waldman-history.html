@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waldman Company History - Berks County, PA</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav class="main-nav">
+        <div class="logo-container">
+          <a href="/">
+            <img
+              src="https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Contact/waldman-logo.webp"
+              alt="Waldman Electrical Contractors Logo"
+              class="logo" />
+          </a>
+        </div>
+
+        <!-- DESKTOP NAVIGATION -->
+        <ul class="nav-links desktop-links">
+          <li>
+            <a href="/">Home <span class="nav-indicator"></span></a>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">Electric Services</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/residential-electric.html"
+                ><i class="fas fa-home"></i> Residential Electric</a
+              >
+              <a href="/commercial-electric.html"
+                ><i class="fas fa-building"></i> Commercial Electric</a
+              >
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">
+              <span class="nav-text">Generators</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/automatic.html"
+                ><i class="fas fa-power-off"></i> Automatic Generators</a
+              >
+              <a href="/manual.html"
+                ><i class="fas fa-cog"></i> Manual Generators</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="/lightning-protection.html"
+              >Lightning Protection <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li>
+            <a href="/reviews.html"
+              >Reviews <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="active">
+              <span class="nav-text">About</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/about.html"><i class="fas fa-info-circle"></i> About</a>
+              <a href="/waldman-history.html" class="active"
+                ><i class="fas fa-history"></i> Waldman History</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="/gallery.html"
+              >Gallery <span class="nav-indicator"></span
+            ></a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="contact-link">
+              <span class="nav-text">Contact</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="/contact.html"
+                ><i class="fas fa-envelope"></i> Contact</a
+              >
+              <a href="/request-a-service.html"
+                ><i class="fas fa-wrench"></i> Request a Service</a
+              >
+            </div>
+          </li>
+        </ul>
+
+        <!-- MOBILE NAVIGATION -->
+        <div class="mobile-nav">
+          <!-- Open Status for Mobile -->
+          <div class="mobile-status">
+            <span class="open-status">
+              <!-- This will be populated by JavaScript -->
+            </span>
+            <a href="/" class="mobile-home-button" aria-label="Go to homepage">
+              <i class="fas fa-home"></i>
+            </a>
+          </div>
+
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-links mobile-links">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li class="dropdown">
+              <a href="#">
+                Electric Services <i class="fas fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-content">
+                <a href="/residential-electric.html"
+                  ><i class="fas fa-home"></i> Residential Electric</a
+                >
+                <a href="/commercial-electric.html"
+                  ><i class="fas fa-building"></i> Commercial Electric</a
+                >
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#">Generators <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-content">
+                <a href="/automatic.html"
+                  ><i class="fas fa-power-off"></i> Automatic Generators</a
+                >
+                <a href="/manual.html"
+                  ><i class="fas fa-cog"></i> Manual Generators</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="/lightning-protection.html">Lightning Protection</a>
+            </li>
+            <li>
+              <a href="/reviews.html">Reviews</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="active"
+                >About <i class="fas fa-chevron-down"></i
+              ></a>
+              <div class="dropdown-content">
+                <a href="/about.html"
+                  ><i class="fas fa-info-circle"></i> About</a
+                >
+                <a href="/waldman-history.html" class="active"
+                  ><i class="fas fa-history"></i> Waldman History</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="/gallery.html">Gallery</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="contact-link"
+                >Contact <i class="fas fa-chevron-down"></i
+              ></a>
+              <div class="dropdown-content">
+                <a href="/contact.html"
+                  ><i class="fas fa-envelope"></i> Contact</a
+                >
+                <a href="/request-a-service.html"
+                  ><i class="fas fa-wrench"></i> Request a Service</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Floating phone for mobile -->
+    <div class="floating-phone">
+      <a href="tel:6103720151">
+        <i class="fas fa-phone-alt"></i> (610) 372-0151
+      </a>
+    </div>
+
+    <!-- New History Header Design -->
+    <div class="wh-history-hero">
+      <div class="wh-history-hero-overlay"></div>
+      <div class="container">
+        <div class="wh-history-hero-content">
+          <div class="wh-history-badge">Since 1918</div>
+          <h1 class="wh-history-hero-title">Our Legacy of Excellence</h1>
+          <div class="wh-history-hero-subtitle">
+            A Century of Trusted Electrical Service
+          </div>
+
+          <!-- Stats Bar -->
+          <div class="wh-history-stats">
+            <div class="wh-history-stat-item">
+              <div class="wh-history-stat-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="wh-history-stat-text">
+                <span class="wh-history-stat-value">100+</span>
+                <span class="wh-history-stat-label">Years of Service</span>
+              </div>
+            </div>
+
+            <div class="wh-history-stat-item">
+              <div class="wh-history-stat-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="wh-history-stat-text">
+                <span class="wh-history-stat-value">45+</span>
+                <span class="wh-history-stat-label">Years of Experience</span>
+              </div>
+            </div>
+
+            <div class="wh-history-stat-item">
+              <div class="wh-history-stat-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="wh-history-stat-text">
+                <div class="open-status"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New History Intro Section -->
+    <section class="wh-history-intro-new">
+      <div class="container">
+        <div class="wh-history-intro-content">
+          <div class="wh-history-intro-left">
+            <h2 class="wh-history-intro-heading">
+              The Waldman Electrical Story
+            </h2>
+            <div class="wh-history-intro-divider"></div>
+            <p class="wh-history-intro-text">
+              From our humble beginnings in 1918 as one of the first electrical
+              contractors in Berks County, to our position today as a trusted
+              industry leader, Waldman Electrical Contractors has been lighting
+              the way for generations. Our journey has been one of innovation,
+              dedication, and unwavering commitment to quality service.
+            </p>
+            <p class="wh-history-intro-text">
+              Follow our timeline below to explore how we helped convert West
+              Reading from gas to electricity, survived the Great Depression,
+              and evolved into the comprehensive electrical service provider we
+              are today.
+            </p>
+          </div>
+          <div class="wh-history-intro-right">
+            <div class="wh-history-intro-image">
+              <img
+                src="images/history/vintage-electrical.webp"
+                alt="Vintage Waldman Electrical Workers"
+                class="wh-history-vintage-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="wh-history-timeline">
+      <div class="container">
+        <div class="wh-history-timeline-container">
+          <!-- 1918 Foundation -->
+          <div class="wh-history-timeline-item">
+            <div class="wh-history-timeline-marker">
+              <div class="wh-history-timeline-year">1918</div>
+            </div>
+            <div class="wh-history-timeline-content">
+              <h3 class="wh-history-timeline-title">The Beginning</h3>
+              <div class="wh-history-timeline-text">
+                <p>
+                  Waldman Electrical Contractors traces its roots to the Stitzer
+                  & Waldman Electric Company, which began operations in 1918 at
+                  438 Penn Avenue, West Reading. At that time there were four
+                  Waldmans involved. Edward Waldman and Charles Stitzer were
+                  partners and they hired Edward's three brothers, George,
+                  William and Leon. This firm represented one of the few
+                  electrical companies in Berks County and was instrumental in
+                  helping convert the area from gas to electricity.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1920s Era -->
+          <div class="wh-history-timeline-item">
+            <div class="wh-history-timeline-marker">
+              <div class="wh-history-timeline-year">1920s</div>
+            </div>
+            <div class="wh-history-timeline-content">
+              <h3 class="wh-history-timeline-title">Early Growth</h3>
+              <div class="wh-history-timeline-text">
+                <p>
+                  Electric lighting was the main domestic load during the early
+                  part of the century; therefore, a 30 ampere service was
+                  sufficient. It was a time when service personnel, carrying
+                  their tools and pipe, rode the trolley to the jobs. Pipe was
+                  often bent using the crook of a nearby tree or a convenient
+                  sewer pipe.
+                </p>
+                <p>
+                  Along with the advent of electric appliances, Stitzer and
+                  Waldman grew, and in 1929 bought the property and constructed
+                  the building, which housed the company at 514 Penn Avenue.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1930s-1940s -->
+          <div class="wh-history-timeline-item">
+            <div class="wh-history-timeline-marker">
+              <div class="wh-history-timeline-year">
+                <span>1930s-</span>
+                <span>40s</span>
+              </div>
+            </div>
+            <div class="wh-history-timeline-content">
+              <h3 class="wh-history-timeline-title">Depression Era & Beyond</h3>
+              <div class="wh-history-timeline-text">
+                <p>
+                  The company survived the Depression and kept busy with both
+                  private and commercial accounts. Commercial customers included
+                  Whitner's, where two electricians were permanently assigned
+                  on-site, Tulpehocken Dairy, Colonial Theater, St. Margaret's
+                  Church, Lutz Funeral Home, Sunshine Brewery and People's
+                  Trust.
+                </p>
+                <p>
+                  During the thirties and forties, the company did most of the
+                  wiring in Wyomissing and West Reading, most notably the
+                  private estates. The company also maintained an extensive
+                  appliance sales and service operation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1950s -->
+          <div class="wh-history-timeline-item">
+            <div class="wh-history-timeline-marker">
+              <div class="wh-history-timeline-year">1950s</div>
+            </div>
+            <div class="wh-history-timeline-content">
+              <h3 class="wh-history-timeline-title">New Partnership</h3>
+              <div class="wh-history-timeline-text">
+                <p>
+                  Charles Stitzer died in the late forties and Edward Waldman
+                  retired soon after. In 1950, Leon, George and William Waldman
+                  became partners in Waldman's Electric. The company's first
+                  contract was the West Reading School.
+                </p>
+                <p>
+                  The three brothers were joined by Leon's son, Leon Jr. (Red),
+                  Luther Piersol and by George's two sons. In 1952 Kitty Cranage
+                  came to Waldman's. For the next 25 years, this was the nucleus
+                  of the firm. During this period the complexion of the company
+                  changed with the phasing out of appliance sales and an
+                  increased emphasis on the contracting operations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1975 -->
+          <div class="wh-history-timeline-item">
+            <div class="wh-history-timeline-marker">
+              <div class="wh-history-timeline-year">1975</div>
+            </div>
+            <div class="wh-history-timeline-content">
+              <h3 class="wh-history-timeline-title">Reorganization</h3>
+              <div class="wh-history-timeline-text">
+                <p>
+                  In 1975, Waldman's Electric reorganized as Waldman Electric
+                  Company, Inc., with Leon and Red as the sole owners and
+                  operators. Peter Waldman, Red's son, joined the company at
+                  this time.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1980s -->
+          <div class="wh-history-timeline-item">
+            <div class="wh-history-timeline-marker">
+              <div class="wh-history-timeline-year">1980s</div>
+            </div>
+            <div class="wh-history-timeline-content">
+              <h3 class="wh-history-timeline-title">New Leadership</h3>
+              <div class="wh-history-timeline-text">
+                <p>
+                  Following Red's death in 1980, Pete became chief operating
+                  officer. Leon Waldman died in 1985 and the following year the
+                  retail store was closed to further expand the contracting
+                  business.
+                </p>
+                <p>
+                  With the closing of the store, Kitty retired and the office
+                  was moved to Leon's home in Exeter Township. At that time
+                  David Waldman, Red's younger son, joined the corporation and
+                  assumed some of the responsibilities of conducting the
+                  business.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1980s-2000 -->
+          <div class="wh-history-timeline-item">
+            <div class="wh-history-timeline-marker">
+              <div class="wh-history-timeline-year">
+                <span>1980s-</span>
+                <span>2000</span>
+              </div>
+            </div>
+            <div class="wh-history-timeline-content">
+              <h3 class="wh-history-timeline-title">Company Expansion</h3>
+              <div class="wh-history-timeline-text">
+                <p>
+                  Over the next twenty years, from the early 1980s when one
+                  journeyman electrician was employed to the year 2000, the
+                  company expanded and better organized its operations and
+                  increased the average number of employees to over 30.
+                </p>
+                <p>
+                  Relations were developed with open shop general contractors,
+                  industrial customers and architects thereby generating much
+                  repeat business. With an emphasis on quality workmanship and
+                  customer satisfaction, our company's customer base continues
+                  to expand.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1998-Present -->
+          <div class="wh-history-timeline-item">
+            <div class="wh-history-timeline-marker">
+              <div class="wh-history-timeline-year">
+                <span>1998-</span>
+                <span>Present</span>
+              </div>
+            </div>
+            <div class="wh-history-timeline-content">
+              <h3 class="wh-history-timeline-title">Modern Era</h3>
+              <div class="wh-history-timeline-text">
+                <p>
+                  In 1998 David decided to leave the company and go into the
+                  excavating business. From that time to this, Peter has been
+                  the sole owner and CEO.
+                </p>
+                <p>
+                  Today, Waldman Electrical Contractors continues its legacy of
+                  excellence, providing quality electrical services throughout
+                  Berks County and beyond. Call us today to schedule an
+                  appointment. All our work is warranted!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Historical Photos Section -->
+    <section class="wh-history-photos">
+      <div class="container">
+        <h2 class="wh-history-photos-title">Waldman Through The Years</h2>
+        <div class="wh-history-photos-grid">
+          <div class="wh-history-photo-item">
+            <div class="wh-history-photo-frame">
+              <img
+                src="images/history/waldman-1920s.webp"
+                alt="Waldman Electric in the 1920s"
+                class="wh-history-photo-img" />
+            </div>
+            <p class="wh-history-photo-caption">
+              Original Stitzer & Waldman Electric Company, 1920s
+            </p>
+          </div>
+
+          <div class="wh-history-photo-item">
+            <div class="wh-history-photo-frame">
+              <img
+                src="images/history/waldman-1950s.webp"
+                alt="Waldman Electric in the 1950s"
+                class="wh-history-photo-img" />
+            </div>
+            <p class="wh-history-photo-caption">
+              The Waldman Brothers Partnership, 1950s
+            </p>
+          </div>
+
+          <div class="wh-history-photo-item">
+            <div class="wh-history-photo-frame">
+              <img
+                src="images/history/waldman-1980s.webp"
+                alt="Waldman Electric in the 1980s"
+                class="wh-history-photo-img" />
+            </div>
+            <p class="wh-history-photo-caption">Expanding Operations, 1980s</p>
+          </div>
+
+          <div class="wh-history-photo-item">
+            <div class="wh-history-photo-frame">
+              <img
+                src="images/history/waldman-today.webp"
+                alt="Waldman Electric Today"
+                class="wh-history-photo-img" />
+            </div>
+            <p class="wh-history-photo-caption">
+              Waldman Electrical Contractors Today
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legacy Section -->
+    <section class="wh-history-legacy">
+      <div class="container">
+        <div class="wh-history-legacy-content">
+          <h2 class="wh-history-legacy-title">A Legacy of Excellence</h2>
+          <p class="wh-history-legacy-text">
+            For over a century, Waldman Electrical Contractors has maintained a
+            commitment to quality, reliability, and exceptional customer
+            service. From our humble beginnings helping West Reading transition
+            from gas to electricity, to our position today as a trusted
+            electrical contractor throughout Berks County, our family legacy
+            continues.
+          </p>
+          <p class="wh-history-legacy-text">
+            We're proud of our history and even more excited about our future.
+            The values established by our founders—integrity, craftsmanship, and
+            dedication—continue to guide everything we do.
+          </p>
+
+          <div class="wh-history-legacy-cta">
+            <a href="/contact.html" class="wh-history-legacy-btn">
+              <i class="fas fa-phone-alt"></i> Contact Us Today
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="wh-history-cta">
+      <div class="container">
+        <h2 class="wh-history-cta-title">
+          Ready to Experience Our Century of Expertise?
+        </h2>
+        <p class="wh-history-cta-text">
+          Contact us today for a free estimate on your electrical needs.
+        </p>
+        <div class="wh-history-cta-buttons">
+          <a href="tel:6103720151" class="wh-history-cta-btn">
+            <i class="fas fa-phone-alt"></i> (610) 372-0151
+          </a>
+          <a href="/request-a-service.html" class="wh-history-cta-btn">
+            <i class="fas fa-wrench"></i> Request a Service
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>SERVICING</h3>
+          </div>
+          <p>Berks County, PA<br />and Surrounding Areas</p>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-clock"></i>
+            <h3>HOURS</h3>
+          </div>
+          <div class="hours-grid">
+            <span>Mon - Fri</span>
+            <span>8:00 am - 4:00 pm</span>
+            <span>Sat</span>
+            <span>Closed</span>
+            <span>Sun</span>
+            <span>Closed</span>
+          </div>
+          <p>24/7 Emergency Service, Same-Day Service</p>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-heading">
+            <i class="fas fa-phone-alt"></i>
+            <h3>CONTACT US</h3>
+          </div>
+          <p>
+            Main: (610) 372-0151<br />
+            Toll Free: (800) 672-0151<br />
+            <a href="mailto:service@waldmanelectric.com"
+              >service@waldmanelectric.com</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <div class="line"></div>
+        <a
+          href="https://www.facebook.com/WaldmanElectricCompany"
+          class="social-icon"
+          target="_blank"
+          rel="noopener">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <div class="line"></div>
+      </div>
+
+      <div class="footer-links">
+        <a href="privacy-policy.html" target="_blank" rel="noopener"
+          >Privacy Policy</a
+        >
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
