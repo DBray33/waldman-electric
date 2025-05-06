@@ -515,8 +515,18 @@ const PageHeaderPositioning = {
     );
 
     if (header && pageHeaderContainers.length > 0) {
-      // Initial positioning
+      // Initial positioning - run immediately
       this.adjustPageHeaderPosition();
+
+      // Run again after a short delay to ensure all elements are fully rendered
+      setTimeout(() => this.adjustPageHeaderPosition(), 100);
+
+      // And once more after page is fully loaded
+      window.addEventListener('load', () => {
+        this.adjustPageHeaderPosition();
+        // Run one more time after a slight delay to handle any post-load rendering
+        setTimeout(() => this.adjustPageHeaderPosition(), 200);
+      });
 
       // Update on window resize
       window.addEventListener('resize', () => this.adjustPageHeaderPosition());
@@ -540,6 +550,13 @@ const PageHeaderPositioning = {
         childList: true,
         subtree: true,
       });
+
+      // Handle page visibility changes (when returning to the tab)
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') {
+          setTimeout(() => this.adjustPageHeaderPosition(), 100);
+        }
+      });
     }
   },
 
@@ -551,6 +568,8 @@ const PageHeaderPositioning = {
 
     if (header && pageHeaderContainers.length > 0) {
       const headerHeight = header.offsetHeight;
+
+      console.log('Adjusting header positioning. Header height:', headerHeight); // Add logging
 
       // Apply the header's height as margin-top to all page header containers
       pageHeaderContainers.forEach((container) => {
@@ -566,11 +585,12 @@ const PageHeaderPositioning = {
         if (paddingTop > 0) {
           container.style.paddingTop = '0px';
         }
+
+        console.log('Container adjusted:', container.className); // Add logging
       });
     }
   },
 };
-
 /**
  * =====================================================
  * SERVICE CARDS ANIMATION MODULE

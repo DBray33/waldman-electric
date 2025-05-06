@@ -11,6 +11,24 @@
   --transition: all 0.3s ease;
 }
 
+/* Default spacing for page content containers */
+.page-header-intro-container,
+.wh-history-hero,
+.reviews-header,
+.contact-page-hero,
+.service-request-header,
+.lp-lightning-hero,
+.re-residential-hero,
+.ce-commercial-hero,
+.ag-generator-hero,
+.mg-manual-hero,
+.rv-reviews-hero,
+.ab-about-hero,
+.gl-gallery-hero,
+.privacy-content {
+  margin-top: 80px; /* Default value that gets overridden by JS */
+}
+
 * {
   margin: 0;
   padding: 0;
