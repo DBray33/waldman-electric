@@ -7164,6 +7164,16 @@ footer a:hover::after {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+.contact-stat-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.contact-stat-link:hover {
+  cursor: pointer;
+}
+
 /* Contact Intro Section */
 .contact-intro-section {
   padding: 80px 0;
@@ -7425,6 +7435,19 @@ footer a:hover::after {
 }
 
 /* Contact Form Section */
+#contactForm {
+  scroll-margin-top: 2000px; /* Adjust this value based on your header height */
+}
+.contact-intro-cta {
+  margin-top: 30px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .contact-intro-cta {
+    text-align: center;
+  }
+}
 .contact-form-section {
   padding: 70px 0;
   background-color: #fff;
@@ -7965,33 +7988,30 @@ footer a:hover::after {
 }
 
 .service-request-button {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f5a623;
-  color: #fff;
+  background-color: #e1171e;
+  color: white;
   border: none;
-  border-radius: 5px;
-  padding: 14px 30px;
-  font-size: 16px;
+  padding: 14px 25px;
+  font-size: 1rem;
   font-weight: 600;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  display: inline-flex;
+  transition: background-color 0.3s ease;
+  display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(245, 166, 35, 0.3);
+  gap: 10px;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
 }
 
 .service-request-button i {
-  margin-right: 8px;
+  font-size: 1.1rem;
+  margin-right: 0;
 }
 
 .service-request-button:hover {
-  background-color: #e69716;
-  transform: translateY(-2px);
-}
-
-.service-request-button:active {
-  transform: translateY(0);
+  background-color: #b91318;
 }
 
 /* Emergency Banner Styles */
