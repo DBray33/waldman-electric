@@ -776,25 +776,175 @@ const ReviewsPageHeaderFix = {
 
 /**
  * =====================================================
- * REVIEWS/TESTIMONIALS SORTER
+ * REVIEWS/TESTIMONIALS SORTER - Handles the sorting/filtering of reviews between Google and Testimonial types
  * =====================================================
  */
+
 /**
  * Reviews Filter Module
  * Handles the sorting/filtering of reviews between Google and Testimonial types
+ * and implements a "Load More" functionality
  */
 const ReviewsFilter = {
+  // Configuration
+  config: {
+    initialReviewsToShow: 9, // Number of reviews to show initially
+    additionalReviewsToLoad: 9, // Number of reviews to load when clicking "Load More"
+  },
+
+  // Track current state
+  state: {
+    currentFilter: 'all',
+    visibleCount: 0,
+  },
+
   init: function () {
     // Check if we're on the reviews page (has filter buttons)
     const filterBtns = document.querySelectorAll('.filter-btn');
     if (filterBtns.length === 0) return;
 
     // Get all review elements
+    const allReviews = document.querySelectorAll('.review-item');
     const googleReviews = document.querySelectorAll('.google-review');
     const testimonialReviews = document.querySelectorAll('.testimonial-review');
 
+    // Set initial state
+    this.state.visibleCount = this.config.initialReviewsToShow;
+    this.state.currentFilter = 'all';
+
+    // Create and insert "Load More" button if there are more reviews than the initial count
+    if (allReviews.length > this.config.initialReviewsToShow) {
+      this.createLoadMoreButton();
+    }
+
     // Initialize event listeners for filter buttons
     this.initFilterButtons(filterBtns, googleReviews, testimonialReviews);
+
+    // Important: Apply initial filtering to hide reviews beyond the initial count
+    // This needs to run AFTER everything else is set up
+    this.applyInitialFiltering(allReviews);
+  },
+
+  /**
+   * Apply initial filtering to hide reviews beyond the initial count
+   */
+  applyInitialFiltering: function (allReviews) {
+    // First, hide all reviews
+    allReviews.forEach((review) => {
+      review.classList.add('hidden-review');
+    });
+
+    // Then show only the first few based on initialReviewsToShow
+    for (
+      let i = 0;
+      i < this.config.initialReviewsToShow && i < allReviews.length;
+      i++
+    ) {
+      allReviews[i].classList.remove('hidden-review');
+    }
+
+    // Update load more button visibility
+    const loadMoreBtn = document.querySelector('.load-more-btn');
+    if (loadMoreBtn) {
+      if (allReviews.length <= this.config.initialReviewsToShow) {
+        loadMoreBtn.parentNode.style.display = 'none';
+      } else {
+        loadMoreBtn.parentNode.style.display = 'block';
+      }
+    }
+  },
+
+  /**
+   * Creates and inserts the "Load More" button
+   */
+  createLoadMoreButton: function () {
+    const reviewsContainer = document.querySelector('.reviews-container');
+    if (!reviewsContainer) return;
+
+    // Create button container
+    const loadMoreContainer = document.createElement('div');
+    loadMoreContainer.className = 'load-more-container';
+    loadMoreContainer.style.textAlign = 'center';
+    loadMoreContainer.style.marginTop = '40px';
+
+    // Create button
+    const loadMoreBtn = document.createElement('button');
+    loadMoreBtn.className = 'hero-btn load-more-btn';
+    loadMoreBtn.innerHTML = '<i class="fas fa-plus"></i> Load More Reviews';
+    loadMoreBtn.style.backgroundColor = '#1a3b6e';
+    loadMoreBtn.style.color = 'white';
+    loadMoreBtn.style.transition = 'all 0.3s ease';
+    loadMoreBtn.style.border = 'none';
+    loadMoreBtn.style.padding = '12px 25px';
+    loadMoreBtn.style.borderRadius = '5px';
+    loadMoreBtn.style.fontWeight = '600';
+    loadMoreBtn.style.cursor = 'pointer';
+
+    // Add hover styles
+    loadMoreBtn.addEventListener('mouseenter', function () {
+      this.style.backgroundColor = '#0e2c5d';
+      this.style.transform = 'translateY(-3px)';
+    });
+
+    loadMoreBtn.addEventListener('mouseleave', function () {
+      this.style.backgroundColor = '#1a3b6e';
+      this.style.transform = 'translateY(0)';
+    });
+
+    // Add click event
+    loadMoreBtn.addEventListener('click', () => {
+      this.loadMoreReviews();
+    });
+
+    // Append button to container
+    loadMoreContainer.appendChild(loadMoreBtn);
+
+    // Append container after reviews container
+    reviewsContainer.parentNode.insertBefore(
+      loadMoreContainer,
+      reviewsContainer.nextSibling
+    );
+  },
+
+  /**
+   * Handles loading more reviews when the button is clicked
+   */
+  loadMoreReviews: function () {
+    const googleReviews = document.querySelectorAll('.google-review');
+    const testimonialReviews = document.querySelectorAll('.testimonial-review');
+
+    // Increase the visible count
+    this.state.visibleCount += this.config.additionalReviewsToLoad;
+
+    // Update visible reviews
+    this.updateVisibleReviews(googleReviews, testimonialReviews);
+
+    // Hide the "Load More" button if all reviews are visible
+    const totalVisibleReviews = this.getVisibleReviewsCount(
+      googleReviews,
+      testimonialReviews
+    );
+
+    if (this.state.visibleCount >= totalVisibleReviews) {
+      const loadMoreBtn = document.querySelector('.load-more-btn');
+      if (loadMoreBtn) {
+        loadMoreBtn.parentNode.style.display = 'none';
+      }
+    }
+  },
+
+  /**
+   * Get the total count of reviews that should be visible based on current filter
+   */
+  getVisibleReviewsCount: function (googleReviews, testimonialReviews) {
+    switch (this.state.currentFilter) {
+      case 'google':
+        return googleReviews.length;
+      case 'testimonial':
+        return testimonialReviews.length;
+      default:
+        return googleReviews.length + testimonialReviews.length;
+    }
   },
 
   /**
@@ -815,8 +965,29 @@ const ReviewsFilter = {
         // Get the filter type from data attribute
         const filter = btn.getAttribute('data-filter');
 
+        // Update current filter in state
+        this.state.currentFilter = filter;
+
+        // Reset visible count to initial value when changing filters
+        this.state.visibleCount = this.config.initialReviewsToShow;
+
         // Apply filtering based on selection
         this.filterReviews(filter, googleReviews, testimonialReviews);
+
+        // Show the "Load More" button if there are more reviews to show
+        const totalVisibleReviews = this.getVisibleReviewsCount(
+          googleReviews,
+          testimonialReviews
+        );
+        const loadMoreBtn = document.querySelector('.load-more-btn');
+
+        if (loadMoreBtn) {
+          if (this.state.visibleCount < totalVisibleReviews) {
+            loadMoreBtn.parentNode.style.display = 'block';
+          } else {
+            loadMoreBtn.parentNode.style.display = 'none';
+          }
+        }
       });
     });
   },
@@ -830,27 +1001,84 @@ const ReviewsFilter = {
   filterReviews: function (filter, googleReviews, testimonialReviews) {
     switch (filter) {
       case 'all':
-        // Show all reviews
-        this.showElements(googleReviews);
-        this.showElements(testimonialReviews);
+        // Apply visible count to all reviews
+        this.hideAllReviews(googleReviews, testimonialReviews);
+        this.updateVisibleReviews(googleReviews, testimonialReviews);
         break;
 
       case 'google':
-        // Show Google reviews, hide testimonials
-        this.showElements(googleReviews);
+        // Hide all testimonials, show limited google reviews
         this.hideElements(testimonialReviews);
+        this.hideAllReviews(googleReviews, []);
+        this.updateVisibleReviews(googleReviews, []);
         break;
 
       case 'testimonial':
-        // Show testimonials, hide Google reviews
+        // Hide all google reviews, show limited testimonials
         this.hideElements(googleReviews);
-        this.showElements(testimonialReviews);
+        this.hideAllReviews([], testimonialReviews);
+        this.updateVisibleReviews([], testimonialReviews);
         break;
 
       default:
-        // Default to showing all
-        this.showElements(googleReviews);
-        this.showElements(testimonialReviews);
+        // Default to showing limited number of all reviews
+        this.hideAllReviews(googleReviews, testimonialReviews);
+        this.updateVisibleReviews(googleReviews, testimonialReviews);
+    }
+  },
+
+  /**
+   * Hide all reviews first
+   */
+  hideAllReviews: function (googleReviews, testimonialReviews) {
+    this.hideElements(googleReviews);
+    this.hideElements(testimonialReviews);
+  },
+
+  /**
+   * Show only the limited number of reviews based on visible count
+   */
+  updateVisibleReviews: function (googleReviews, testimonialReviews) {
+    let visibleCount = 0;
+
+    // Function to show elements up to the visible count
+    const showUpToLimit = (elements) => {
+      elements.forEach((el, index) => {
+        if (visibleCount < this.state.visibleCount) {
+          el.classList.remove('hidden-review');
+          visibleCount++;
+        } else {
+          el.classList.add('hidden-review');
+        }
+      });
+    };
+
+    // Filter behavior depends on current filter
+    switch (this.state.currentFilter) {
+      case 'google':
+        showUpToLimit(googleReviews);
+        break;
+
+      case 'testimonial':
+        showUpToLimit(testimonialReviews);
+        break;
+
+      default:
+        // For 'all', interleave the reviews to maintain a balanced mix
+        const allReviews = Array.from(
+          document.querySelectorAll('.review-item')
+        );
+
+        // Sort them to maintain their original order in the DOM
+        allReviews.sort((a, b) => {
+          return (
+            Array.from(document.querySelectorAll('.review-item')).indexOf(a) -
+            Array.from(document.querySelectorAll('.review-item')).indexOf(b)
+          );
+        });
+
+        // Show reviews up to visible count
+        showUpToLimit(allReviews);
     }
   },
 
