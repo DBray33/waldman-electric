@@ -32,10 +32,9 @@ const App = {
       FeatureCardAnimations,
       LightboxModule,
       ReviewsPageHeaderFix,
-      NavigationActiveLink, // Added new module for active navigation
-      GalleryModule, // Added Gallery Module to fix thumbnail hover functionality
-      // HistoryHeroPositioning removed to prevent conflict with PageHeaderPositioning
-      // Add new modules here without modifying the init function
+      NavigationActiveLink,
+      GalleryModule,
+      ReviewsFilter,
     ]);
   },
 
@@ -774,6 +773,111 @@ const ReviewsPageHeaderFix = {
     }
   },
 };
+
+/**
+ * =====================================================
+ * REVIEWS/TESTIMONIALS SORTER
+ * =====================================================
+ */
+/**
+ * Reviews Filter Module
+ * Handles the sorting/filtering of reviews between Google and Testimonial types
+ */
+const ReviewsFilter = {
+  init: function () {
+    // Check if we're on the reviews page (has filter buttons)
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    if (filterBtns.length === 0) return;
+
+    // Get all review elements
+    const googleReviews = document.querySelectorAll('.google-review');
+    const testimonialReviews = document.querySelectorAll('.testimonial-review');
+
+    // Initialize event listeners for filter buttons
+    this.initFilterButtons(filterBtns, googleReviews, testimonialReviews);
+  },
+
+  /**
+   * Initialize filter button click handlers
+   * @param {NodeList} filterBtns - Filter button elements
+   * @param {NodeList} googleReviews - Google review elements
+   * @param {NodeList} testimonialReviews - Testimonial review elements
+   */
+  initFilterButtons: function (filterBtns, googleReviews, testimonialReviews) {
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach((b) => b.classList.remove('active'));
+
+        // Add active class to clicked button
+        btn.classList.add('active');
+
+        // Get the filter type from data attribute
+        const filter = btn.getAttribute('data-filter');
+
+        // Apply filtering based on selection
+        this.filterReviews(filter, googleReviews, testimonialReviews);
+      });
+    });
+  },
+
+  /**
+   * Show/hide reviews based on selected filter
+   * @param {string} filter - Filter type: 'all', 'google', or 'testimonial'
+   * @param {NodeList} googleReviews - Google review elements
+   * @param {NodeList} testimonialReviews - Testimonial review elements
+   */
+  filterReviews: function (filter, googleReviews, testimonialReviews) {
+    switch (filter) {
+      case 'all':
+        // Show all reviews
+        this.showElements(googleReviews);
+        this.showElements(testimonialReviews);
+        break;
+
+      case 'google':
+        // Show Google reviews, hide testimonials
+        this.showElements(googleReviews);
+        this.hideElements(testimonialReviews);
+        break;
+
+      case 'testimonial':
+        // Show testimonials, hide Google reviews
+        this.hideElements(googleReviews);
+        this.showElements(testimonialReviews);
+        break;
+
+      default:
+        // Default to showing all
+        this.showElements(googleReviews);
+        this.showElements(testimonialReviews);
+    }
+  },
+
+  /**
+   * Show a collection of elements
+   * @param {NodeList} elements - Elements to show
+   */
+  showElements: function (elements) {
+    elements.forEach((el) => {
+      el.classList.remove('hidden-review');
+    });
+  },
+
+  /**
+   * Hide a collection of elements
+   * @param {NodeList} elements - Elements to hide
+   */
+  hideElements: function (elements) {
+    elements.forEach((el) => {
+      el.classList.add('hidden-review');
+    });
+  },
+};
+
+// Don't forget to register the module in your App.init function
+// Add this to your modules array:
+// ReviewsFilter,
 
 /**
  * =====================================================

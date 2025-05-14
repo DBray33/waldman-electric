@@ -4284,25 +4284,25 @@ footer a:hover::after {
   text-decoration: underline;
 }
 
-/* Google Reviews Section */
-.google-reviews-section {
+/* Reviews Section */
+.reviews-section {
   padding: 60px 0;
   background-color: #f9f9f9;
 }
 
-.google-reviews-section h2 {
+.reviews-section h2 {
   color: #1a3b6e;
   font-size: 2.2rem;
   text-align: center;
   margin-bottom: 40px;
 }
 @media (max-width: 768px) {
-  .google-reviews-section h2 {
+  .reviews-section h2 {
     font-size: 1.8rem;
   }
 }
 @media (max-width: 480px) {
-  .google-reviews-section h2 {
+  .reviews-section h2 {
     font-size: 1.5rem;
   }
 }
@@ -4349,25 +4349,9 @@ footer a:hover::after {
   }
 }
 
-.review-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(to right, #1a3b6e, #f8b400);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
 .review-item:hover {
   transform: translateY(-7px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.review-item:hover::before {
-  opacity: 1;
 }
 
 .featured-review {
@@ -4394,6 +4378,40 @@ footer a:hover::after {
   border-radius: 12px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+/* Google Reviews hover effect */
+.google-review::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #1a3b6e, #f8b400);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.google-review:hover::before {
+  opacity: 1;
+}
+
+/* Testimonial Review Item */
+.testimonial-review::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, red, #0147ab);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.testimonial-review:hover::before {
+  opacity: 1;
 }
 
 .review-header {
@@ -4535,7 +4553,8 @@ footer a:hover::after {
 
 .view-all-reviews {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 35px;
 }
 
 .view-all-reviews .hero-btn {
@@ -4547,6 +4566,66 @@ footer a:hover::after {
 .view-all-reviews .hero-btn:hover {
   background-color: #0e2c5d;
   transform: translateY(-3px);
+}
+
+/* Filter Buttons */
+.reviews-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: #555;
+}
+
+.filter-btn.active {
+  background-color: #1a3b6e;
+  color: white;
+}
+
+.filter-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.filter-btn.active:hover {
+  background-color: #0e2c5d;
+}
+
+/* Review Type Badge */
+.review-type {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.review-type-google {
+  background-color: #4285f4;
+  color: white;
+}
+
+.review-type-testimonial {
+  background-color: #7d2e44;
+  color: white;
+}
+
+/* Hidden Reviews */
+.hidden-review {
+  display: none;
 }
 
 /* CTA Section */
