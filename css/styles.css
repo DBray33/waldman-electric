@@ -2646,7 +2646,7 @@ footer a:hover::after {
   }
 
   .cta-image-row4 {
-    width: 70%;
+    width: 70%; /* 30% smaller than full width */
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
@@ -2658,6 +2658,13 @@ footer a:hover::after {
 
   .feature-list h4 {
     text-align: center;
+  }
+}
+
+/* Additional breakpoint for smaller screens down to 800px */
+@media (max-width: 800px) {
+  .cta-image-row4 {
+    width: 60%; /* Increase size as screen gets smaller */
   }
 }
 
@@ -2727,7 +2734,7 @@ footer a:hover::after {
   }
 
   .cta-image-row4 {
-    width: 100%;
+    width: 100%; /* Full width on smallest screens */
     margin-top: 1.5rem;
   }
 
