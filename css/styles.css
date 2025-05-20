@@ -2109,7 +2109,7 @@ footer a:hover::after {
 /* Generator Hero Section */
 .ag-generator-hero {
   position: relative;
-  background: url('https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Automatic/automatic-large.webp')
+  background: url('https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Automatic/Cummins%20Power%20Gen%20Neill%20Gas%20DSC5719.webp')
     center/cover no-repeat;
   padding: 168px 0 300px;
   color: var(--white);
@@ -5013,8 +5013,9 @@ footer a:hover::after {
 .ab-about-hero {
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-    url('../images/about-header-bg.webp') center/cover no-repeat;
-  padding: 120px 0 60px;
+    url('https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/About/waldman-van-about-page-hero-bg.webp')
+      center/cover no-repeat;
+  padding: 160px 0 200px;
   color: var(--white);
   overflow: hidden;
 }
@@ -5631,7 +5632,7 @@ footer a:hover::after {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: #e50000;
+  background-color: #8b0000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5759,7 +5760,8 @@ footer a:hover::after {
 .waldman-about-cta {
   padding: 60px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url('../images/cta-background.webp') no-repeat center center;
+    url('https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/About/about-page-cta-bg.webp')
+      no-repeat center center;
   background-size: cover;
   text-align: center;
   color: white;
@@ -5812,7 +5814,7 @@ footer a:hover::after {
 .waldman-about-cta-btn {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #e50000;
+  background-color: #8b0000;
   color: white;
   text-decoration: none;
   border-radius: 4px;
@@ -6455,7 +6457,7 @@ footer a:hover::after {
 /* Legacy Section */
 .wh-history-legacy {
   padding: 60px 0;
-  background-color: #fff;
+  background-color: #6e6e6e;
   text-align: center;
 }
 
@@ -6468,14 +6470,14 @@ footer a:hover::after {
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #333;
+  color: black;
   font-family: 'Poppins', sans-serif;
 }
 
 .wh-history-legacy-text {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #555;
+  color: #fff;
   margin-bottom: 20px;
 }
 
@@ -7845,11 +7847,30 @@ footer a:hover::after {
   border-bottom: none;
 }
 
-/* CTA Section */
 .contact-cta-section {
-  padding: 70px 0;
-  background-color: #333;
-  color: white;
+  position: relative;
+  background-image: url('https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Contact/emergency-service-bg.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
 }
 
 .contact-cta-container {
@@ -7983,7 +8004,8 @@ footer a:hover::after {
 /* Service Request Header Styles */
 .service-request-header {
   position: relative;
-  background: url('../images/service-request-bg.jpg') no-repeat center center;
+  background: url('https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Request%20a%20Service/request-a-service-page-hero-bg.webp')
+    no-repeat center center;
   background-size: cover;
   min-height: 400px;
   display: flex;
@@ -8307,7 +8329,7 @@ footer a:hover::after {
 /* Service CTA Section */
 .service-cta {
   position: relative;
-  background-image: url('../images/service-cta-bg.jpg');
+  background-image: url('https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/Request%20a%20Service/request-a-service-cta-bg.webp');
   background-size: cover;
   background-position: center;
   padding: 80px 0;
