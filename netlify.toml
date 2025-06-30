@@ -1,4 +1,11 @@
-# Only keep testimonials redirects
+# Force redirect from .html to clean URLs (with Pretty URLs enabled)
+[[redirects]]
+  from = "*.html"
+  to = ":splat"
+  status = 301!
+  force = true
+
+# Your testimonials redirects
 [[redirects]]
   from = "/testimonials.html"
   to = "/#testimonials"
