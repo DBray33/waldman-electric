@@ -1,4 +1,17 @@
-# Existing testimonials redirects
+# Force .html removal BEFORE other redirects
+[[redirects]]
+  from = "https://waldmanelectric.com/*.html"
+  to = "https://waldmanelectric.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://waldmanelectric.com/*.html"
+  to = "https://waldmanelectric.com/:splat"
+  status = 301
+  force = true
+
+# Your existing testimonials redirects
 [[redirects]]
   from = "/testimonials.html"
   to = "/#testimonials"
@@ -9,16 +22,8 @@
   to = "/#testimonials"
   status = 301
 
-# Redirect .html URLs to clean URLs (more specific)
-[[redirects]]
-  from = "/*.html"
-  to = "/:splat"
-  status = 301
-  force = true
-
 # Serve HTML files when clean URLs are requested
 [[redirects]]
   from = "/*"
   to = "/:splat.html"
   status = 200
-  force = false  # Add this
