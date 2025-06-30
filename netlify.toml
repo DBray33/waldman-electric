@@ -1,0 +1,23 @@
+# Existing testimonials redirects
+[[redirects]]
+  from = "/testimonials.html"
+  to = "/#testimonials"
+  status = 301
+
+[[redirects]]
+  from = "/testimonials"
+  to = "/#testimonials"
+  status = 301
+
+# Redirect .html URLs to clean URLs
+[[redirects]]
+  from = "/*.html"
+  to = "/:splat"
+  status = 301
+  force = true
+
+# Serve HTML files when clean URLs are requested
+[[redirects]]
+  from = "/*"
+  to = "/:splat.html"
+  status = 200
