@@ -9,7 +9,7 @@
   to = "/#testimonials"
   status = 301
 
-# Redirect .html URLs to clean URLs
+# Redirect .html URLs to clean URLs (more specific)
 [[redirects]]
   from = "/*.html"
   to = "/:splat"
@@ -21,3 +21,4 @@
   from = "/*"
   to = "/:splat.html"
   status = 200
+  force = false  # Add this
