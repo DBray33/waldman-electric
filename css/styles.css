@@ -238,7 +238,7 @@ ul {
 
 /* Company name styling - displayed only on large screens */
 .company-name {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
