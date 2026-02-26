@@ -205,6 +205,16 @@ ul {
   transition: transform 0.1s ease-out;
 }
 
+/* Disable parallax on phones — iOS scroll + transform is glitchy */
+@media (max-width: 768px) {
+  .parallax-bg {
+    height: 100%;
+    will-change: auto;
+    transition: none;
+    transform: none !important;
+  }
+}
+
 /* =========================== hero logo styling ============================== */
 
 /* Base logo styling */

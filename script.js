@@ -351,8 +351,8 @@ const ParallaxEffect = {
   init: function () {
     const parallax = document.querySelector('.parallax-bg');
 
-    if (parallax) {
-      // Parallax Scroll Effect for hero background
+    // Disable parallax on phones — iOS scroll + transform is glitchy
+    if (parallax && window.innerWidth > 768) {
       window.addEventListener('scroll', () => {
         const scrolled = window.scrollY;
         parallax.style.transform = `translateY(${scrolled * -0.2}px)`;
