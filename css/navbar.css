@@ -98,6 +98,7 @@ header.fixed {
 .logo {
   width: 100%;
   height: auto;
+  aspect-ratio: 450 / 277; /* Prevents CLS while image loads */
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
   transition: transform 0.3s ease;
 }

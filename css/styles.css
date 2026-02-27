@@ -206,12 +206,17 @@ ul {
 }
 
 /* Disable parallax on phones — iOS scroll + transform is glitchy */
+/* Also serve smaller mobile hero image (68 KB vs 456 KB) for faster LCP */
 @media (max-width: 768px) {
   .parallax-bg {
     height: 100%;
     will-change: auto;
     transition: none;
     transform: none !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://storage.googleapis.com/kws-clientele/Waldman%20Electrical%20Contractors/index.html/hero-bg-mobile.webp');
+    background-size: cover;
+    background-position: center;
   }
 }
 
@@ -222,6 +227,7 @@ ul {
   display: none; /* Hidden by default for screens larger than 1300px */
   width: 400px; /* Explicit width */
   height: auto; /* Maintain aspect ratio */
+  aspect-ratio: 450 / 277; /* Prevents CLS while image loads */
   margin: 0 auto 25px; /* Center horizontally and add space below */
   max-width: 80%; /* Responsive constraint */
   transition: width 0.3s ease;
